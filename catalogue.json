@@ -1,0 +1,27 @@
+{
+ "format": 2,
+ "packs": [
+  {
+   "id": "theme-outdoors",
+   "title": "Outdoors",
+   "kind": "theme",
+   "version": 2,
+   "engine_min": 2,
+   "size": 3787000,
+   "sha256": "a2e1cc29c3e4f32870c7581bb984759c4c6be1ec62b4dfe843c5c41c234fc338",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-outdoors-2.gpk",
+   "accent": "55AE9F",
+   "accent2": "F2B84B"
+  },
+  {
+   "id": "acorn-fw",
+   "title": "Firmware",
+   "kind": "firmware",
+   "version": 2,
+   "engine_min": 2,
+   "size": 1968176,
+   "sha256": "1342f8744e56b9025439a01b6275f62244e41a54ec9908a94577c4666dc48c6b",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/firmware/acorn-fw-2.bin"
+  }
+ ]
+}
