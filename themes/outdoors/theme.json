@@ -1,7 +1,11 @@
 {
  "slug": "outdoors",
  "title": "Outdoors",
- "version": 3,
+ "version": 4,
+ "tile_ring": {
+  "color": "3A589E",
+  "width": 6
+ },
  "art": {
   "snake": {
    "soil": {
@@ -229,6 +233,15 @@
    "pink_s": "bal_pink_s.png",
    "pop": "bal_pop.png",
    "star_mini": "star_mini.png"
+  },
+  "tilt": {
+   "lawn": {
+    "file": "bg_lawn.png",
+    "alpha": false
+   },
+   "hog": "tm_hog.png",
+   "puddle": "tm_puddle.png",
+   "nest": "tm_nest.png"
   }
  },
  "palette": {
@@ -255,6 +268,8 @@
   "simon": "Simon",
   "bopit": "Bop It",
   "monster": "Monster",
-  "pet": "Pet"
+  "pet": "Pet",
+  "tilt_wall": "3C7A3A",
+  "tilt_wall_sh": "1C3A1E"
  }
 }

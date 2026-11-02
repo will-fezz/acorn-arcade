@@ -1,8 +1,12 @@
 {
  "slug": "manga",
  "title": "Manga",
- "version": 3,
+ "version": 4,
  "draft": true,
+ "tile_ring": {
+  "color": "8A97E2",
+  "width": 6
+ },
  "art": {
   "snake": {
    "soil": {
@@ -230,6 +234,15 @@
    "pink_s": "bal_pink_s.png",
    "pop": "bal_pop.png",
    "star_mini": "star_mini.png"
+  },
+  "tilt": {
+   "lawn": {
+    "file": "bg_lawn.png",
+    "alpha": false
+   },
+   "hog": "tm_hog.png",
+   "puddle": "tm_puddle.png",
+   "nest": "tm_nest.png"
   }
  },
  "palette": {
@@ -256,6 +269,8 @@
   "simon": "Dango",
   "bopit": "Ninja cat",
   "monster": "Kaiju",
-  "pet": "Dragonet"
+  "pet": "Dragonet",
+  "tilt_wall": "C03C3C",
+  "tilt_wall_sh": "4A1014"
  }
 }

@@ -1,0 +1,16 @@
+{
+ "id": "tilt",
+ "title": "Tilt",
+ "rules_version": 1,
+ "rules_engine": 4,
+ "script": "main.lua",
+ "images": {
+  "lawn": {
+   "file": "bg_lawn.png",
+   "alpha": false
+  },
+  "hog": "tm_hog.png",
+  "puddle": "tm_puddle.png",
+  "nest": "tm_nest.png"
+ }
+}
