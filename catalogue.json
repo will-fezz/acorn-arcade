@@ -2,14 +2,34 @@
  "format": 2,
  "packs": [
   {
+   "id": "balloons",
+   "title": "Balloons",
+   "kind": "rules",
+   "version": 1,
+   "engine_min": 3,
+   "size": 4884,
+   "sha256": "70c48ecaaddf2cd4fdb4e3343cfbfd673825eaf9644e3f40fd2349d8ec8af68a",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/balloons-1.gpk"
+  },
+  {
+   "id": "snake",
+   "title": "Snake",
+   "kind": "rules",
+   "version": 3,
+   "engine_min": 2,
+   "size": 4776,
+   "sha256": "11600023f36e3bacff12205958cfbdab97d1fe2351c39851998a70c6f094d93b",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/snake-3.gpk"
+  },
+  {
    "id": "theme-outdoors",
    "title": "Outdoors",
    "kind": "theme",
-   "version": 2,
+   "version": 3,
    "engine_min": 2,
-   "size": 3787000,
-   "sha256": "a2e1cc29c3e4f32870c7581bb984759c4c6be1ec62b4dfe843c5c41c234fc338",
-   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-outdoors-2.gpk",
+   "size": 5911044,
+   "sha256": "fbc175ada89abbfd1d31b564c45571263ecc1a9ca0bb33f33e20c8547239db38",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-outdoors-3.gpk",
    "accent": "55AE9F",
    "accent2": "F2B84B"
   },
