@@ -1,0 +1,261 @@
+{
+ "slug": "space",
+ "title": "Space",
+ "version": 3,
+ "draft": true,
+ "art": {
+  "snake": {
+   "soil": {
+    "file": "bg_soil.png",
+    "alpha": false
+   },
+   "head_right": "snake_head_right.png",
+   "head_up": "snake_head_up.png",
+   "head_left": "snake_head_left.png",
+   "head_down": "snake_head_down.png",
+   "dizzy_right": "snake_dizzy_right.png",
+   "dizzy_up": "snake_dizzy_up.png",
+   "dizzy_left": "snake_dizzy_left.png",
+   "dizzy_down": "snake_dizzy_down.png",
+   "tail_right": "snake_tail_right.png",
+   "tail_up": "snake_tail_up.png",
+   "tail_left": "snake_tail_left.png",
+   "tail_down": "snake_tail_down.png",
+   "body_a": "snake_body_a.png",
+   "body_b": "snake_body_b.png",
+   "carrot": "snake_carrot.png",
+   "radish": "snake_radish.png",
+   "beet": "snake_beet.png"
+  },
+  "ui": {
+   "tile_clock": {
+    "file": "tile_clock.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_snake": {
+    "file": "tile_snake.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_balloons": {
+    "file": "tile_bubbles.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_mole": {
+    "file": "tile_mole.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_lights": {
+    "file": "tile_lights.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_pong": {
+    "file": "tile_pong.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_tilt": {
+    "file": "tile_tilt.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_simon": {
+    "file": "tile_simon.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_bopit": {
+    "file": "tile_bopit.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_monster": {
+    "file": "tile_monster.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_pet": {
+    "file": "tile_pet.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_more": {
+    "file": "tile_more.png",
+    "alpha": true,
+    "round": true
+   },
+   "tile_settings": {
+    "file": "tile_settings.png",
+    "alpha": true,
+    "round": true
+   },
+   "batt_s_10": {
+    "file": "st_batt_s_10.png",
+    "alpha": true
+   },
+   "batt_s_20": {
+    "file": "st_batt_s_20.png",
+    "alpha": true
+   },
+   "batt_s_30": {
+    "file": "st_batt_s_30.png",
+    "alpha": true
+   },
+   "batt_s_40": {
+    "file": "st_batt_s_40.png",
+    "alpha": true
+   },
+   "batt_s_50": {
+    "file": "st_batt_s_50.png",
+    "alpha": true
+   },
+   "batt_s_60": {
+    "file": "st_batt_s_60.png",
+    "alpha": true
+   },
+   "batt_s_70": {
+    "file": "st_batt_s_70.png",
+    "alpha": true
+   },
+   "batt_s_80": {
+    "file": "st_batt_s_80.png",
+    "alpha": true
+   },
+   "batt_s_90": {
+    "file": "st_batt_s_90.png",
+    "alpha": true
+   },
+   "batt_s_100": {
+    "file": "st_batt_s_100.png",
+    "alpha": true
+   },
+   "batt_l_10": {
+    "file": "st_batt_l_10.png",
+    "alpha": true
+   },
+   "batt_l_20": {
+    "file": "st_batt_l_20.png",
+    "alpha": true
+   },
+   "batt_l_30": {
+    "file": "st_batt_l_30.png",
+    "alpha": true
+   },
+   "batt_l_40": {
+    "file": "st_batt_l_40.png",
+    "alpha": true
+   },
+   "batt_l_50": {
+    "file": "st_batt_l_50.png",
+    "alpha": true
+   },
+   "batt_l_60": {
+    "file": "st_batt_l_60.png",
+    "alpha": true
+   },
+   "batt_l_70": {
+    "file": "st_batt_l_70.png",
+    "alpha": true
+   },
+   "batt_l_80": {
+    "file": "st_batt_l_80.png",
+    "alpha": true
+   },
+   "batt_l_90": {
+    "file": "st_batt_l_90.png",
+    "alpha": true
+   },
+   "batt_l_100": {
+    "file": "st_batt_l_100.png",
+    "alpha": true
+   },
+   "bolt_s": {
+    "file": "st_bolt_s.png",
+    "alpha": true
+   },
+   "bolt_l": {
+    "file": "st_bolt_l.png",
+    "alpha": true
+   },
+   "wifi_0": {
+    "file": "st_wifi_0.png",
+    "alpha": true
+   },
+   "wifi_1": {
+    "file": "st_wifi_1.png",
+    "alpha": true
+   },
+   "wifi_2": {
+    "file": "st_wifi_2.png",
+    "alpha": true
+   },
+   "wifi_3": {
+    "file": "st_wifi_3.png",
+    "alpha": true
+   },
+   "rs_bg": {
+    "file": "rs_bg.png",
+    "alpha": false
+   },
+   "star_big": "star_big.png",
+   "star_small": "star_small.png",
+   "bg_night": {
+    "file": "bg_night.png",
+    "alpha": false
+   },
+   "pt_asleep": "pt_asleep.png"
+  },
+  "balloons": {
+   "sky": {
+    "file": "bg_sky.png",
+    "alpha": false
+   },
+   "red_l": "bal_red_l.png",
+   "red_s": "bal_red_s.png",
+   "orange_l": "bal_orange_l.png",
+   "orange_s": "bal_orange_s.png",
+   "yellow_l": "bal_yellow_l.png",
+   "yellow_s": "bal_yellow_s.png",
+   "green_l": "bal_green_l.png",
+   "green_s": "bal_green_s.png",
+   "blue_l": "bal_blue_l.png",
+   "blue_s": "bal_blue_s.png",
+   "purple_l": "bal_purple_l.png",
+   "purple_s": "bal_purple_s.png",
+   "pink_l": "bal_pink_l.png",
+   "pink_s": "bal_pink_s.png",
+   "pop": "bal_pop.png",
+   "star_mini": "star_mini.png"
+  }
+ },
+ "palette": {
+  "page": "0A0D24",
+  "surface": "1A214E",
+  "surface2": "28326C",
+  "ring": "6074B4",
+  "text": "F0F3FF",
+  "muted": "96A0CD",
+  "accent": "70B7FF",
+  "accent2": "FFD24A",
+  "ok": "3FBF8F",
+  "danger": "E0586E",
+  "on_accent": "0C1028",
+  "knob": "F0F3FF"
+ },
+ "names": {
+  "snake": "Rocket",
+  "balloons": "Rockets",
+  "mole": "Craters",
+  "lights": "Stars",
+  "pong": "Orbit",
+  "tilt": "Moon maze",
+  "simon": "Planets",
+  "bopit": "Robot",
+  "monster": "Aliens",
+  "pet": "Pod"
+ }
+}

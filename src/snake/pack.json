@@ -1,0 +1,6 @@
+{"id":"snake","title":"Snake","version":1,"rules_version":3,"engine_min":1,"script":"main.lua",
+ "images":{"soil":{"file":"bg_soil.png","alpha":false},
+ "head_right":"snake_head_right.png","head_up":"snake_head_up.png","head_left":"snake_head_left.png","head_down":"snake_head_down.png",
+ "dizzy_right":"snake_dizzy_right.png","dizzy_up":"snake_dizzy_up.png","dizzy_left":"snake_dizzy_left.png","dizzy_down":"snake_dizzy_down.png",
+ "tail_right":"snake_tail_right.png","tail_up":"snake_tail_up.png","tail_left":"snake_tail_left.png","tail_down":"snake_tail_down.png",
+ "body_a":"snake_body_a.png","body_b":"snake_body_b.png","carrot":"snake_carrot.png","radish":"snake_radish.png","beet":"snake_beet.png"}}

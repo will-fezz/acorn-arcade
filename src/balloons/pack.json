@@ -1,0 +1,29 @@
+{
+ "id": "balloons",
+ "title": "Balloons",
+ "rules_version": 1,
+ "rules_engine": 3,
+ "script": "main.lua",
+ "images": {
+  "sky": {
+   "file": "bg_sky.png",
+   "alpha": false
+  },
+  "red_l": "bal_red_l.png",
+  "red_s": "bal_red_s.png",
+  "orange_l": "bal_orange_l.png",
+  "orange_s": "bal_orange_s.png",
+  "yellow_l": "bal_yellow_l.png",
+  "yellow_s": "bal_yellow_s.png",
+  "green_l": "bal_green_l.png",
+  "green_s": "bal_green_s.png",
+  "blue_l": "bal_blue_l.png",
+  "blue_s": "bal_blue_s.png",
+  "purple_l": "bal_purple_l.png",
+  "purple_s": "bal_purple_s.png",
+  "pink_l": "bal_pink_l.png",
+  "pink_s": "bal_pink_s.png",
+  "pop": "bal_pop.png",
+  "star_mini": "star_mini.png"
+ }
+}

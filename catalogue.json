@@ -22,6 +22,30 @@
    "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/snake-3.gpk"
   },
   {
+   "id": "theme-dinosaurs",
+   "title": "Dinosaurs",
+   "kind": "theme",
+   "version": 3,
+   "engine_min": 2,
+   "size": 6107604,
+   "sha256": "8b7224206f52efe8873f4e5f20abb538d60a850d19ab7e787c8074a98fc293c5",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-dinosaurs-3.gpk",
+   "accent": "FF8A3D",
+   "accent2": "7ECC54"
+  },
+  {
+   "id": "theme-manga",
+   "title": "Manga",
+   "kind": "theme",
+   "version": 3,
+   "engine_min": 2,
+   "size": 5947772,
+   "sha256": "da2e15af73ce1636389211267c319113937503b665d72c29860fb18638ca3595",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-manga-3.gpk",
+   "accent": "E24B4B",
+   "accent2": "F3CF5A"
+  },
+  {
    "id": "theme-outdoors",
    "title": "Outdoors",
    "kind": "theme",
@@ -34,14 +58,38 @@
    "accent2": "F2B84B"
   },
   {
+   "id": "theme-space",
+   "title": "Space",
+   "kind": "theme",
+   "version": 3,
+   "engine_min": 2,
+   "size": 6046640,
+   "sha256": "d00046bb2d4f846fec5670855e58a5c2e1773f0e75bbc2eed8d4217859666478",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-space-3.gpk",
+   "accent": "70B7FF",
+   "accent2": "FFD24A"
+  },
+  {
+   "id": "theme-unicorns",
+   "title": "Unicorns",
+   "kind": "theme",
+   "version": 3,
+   "engine_min": 2,
+   "size": 6031404,
+   "sha256": "37060ce9f2d7e021246deb71ebfa3bc93cc708103f8b5d3c2f52061c1bd1cd8c",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-unicorns-3.gpk",
+   "accent": "FF8FC8",
+   "accent2": "8FE0C0"
+  },
+  {
    "id": "acorn-fw",
    "title": "Firmware",
    "kind": "firmware",
-   "version": 3,
+   "version": 5,
    "engine_min": 2,
-   "size": 1973728,
-   "sha256": "0947623daaaf49280bd02efdfd8d8d5707cc01ef686a4cbf165d90dab5b0d908",
-   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/firmware/acorn-fw-3.bin"
+   "size": 1986416,
+   "sha256": "3d477532ca157711ac405a83781639804a6bd9a459a4b9905ca0d247b27a79c5",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/firmware/acorn-fw-5.bin"
   }
  ]
 }
