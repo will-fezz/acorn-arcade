@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/acorn-mascot.png" width="240" alt="Acorn Arcade cartoon acorn mascot"></p>
+
 # Acorn Arcade: console game library (repo will-fezz/acorn-arcade; not pushed yet)
 
 Layout: `catalogue.json` + `catalogue.json.sig` (signed list), `packs/*.gpk` (signed packs),

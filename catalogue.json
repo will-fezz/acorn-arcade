@@ -95,11 +95,11 @@
    "id": "acorn-fw",
    "title": "Firmware",
    "kind": "firmware",
-   "version": 5,
+   "version": 6,
    "engine_min": 2,
-   "size": 1986416,
-   "sha256": "3d477532ca157711ac405a83781639804a6bd9a459a4b9905ca0d247b27a79c5",
-   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/firmware/acorn-fw-5.bin"
+   "size": 1998976,
+   "sha256": "60819ef26e3528d013f5be77a93e6402aa62d6f6d62b16aba0c0073e20194b47",
+   "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/firmware/acorn-fw-6.bin"
   }
  ]
 }
