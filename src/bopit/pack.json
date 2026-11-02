@@ -1,0 +1,21 @@
+{
+ "id": "bopit",
+ "title": "Do It Quick!",
+ "rules_version": 1,
+ "rules_engine": 4,
+ "script": "main.lua",
+ "images": {
+  "bopit": {
+   "file": "bg_bopit.png",
+   "alpha": false
+  },
+  "idle": "rb_idle.png",
+  "call": "rb_call.png",
+  "cheer": "rb_cheer.png",
+  "sad": "rb_sad.png",
+  "tap": "rb_tap.png",
+  "swipe": "rb_swipe.png",
+  "shake": "rb_shake.png",
+  "worm": "rb_worm.png"
+ }
+}

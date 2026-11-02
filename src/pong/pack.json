@@ -1,0 +1,17 @@
+{
+ "id": "pong",
+ "title": "Bounce Back",
+ "rules_version": 1,
+ "rules_engine": 3,
+ "script": "main.lua",
+ "images": {
+  "pond": {
+   "file": "bg_pond.png",
+   "alpha": false
+  },
+  "frog": "pd_frog.png",
+  "dizzy": "pd_dizzy.png",
+  "pad": "pd_pad.png",
+  "splash": "pd_splash.png"
+ }
+}

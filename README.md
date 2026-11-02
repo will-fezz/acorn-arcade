@@ -16,7 +16,7 @@ Tap balloons, guide a snake and explore short, friendly activities on a small to
 
 ![Outdoors, Space, Dinosaurs, Unicorns and Manga theme previews](assets/themes.jpg)
 
-**Five illustrated worlds:** Outdoors, Space, Dinosaurs, Unicorns and Manga. The new compressed theme packs cover all ten games and have passed host tests. Their public rollout follows confirmation of firmware 6 on the development console; these previews are not a claim of hardware testing in every theme.
+**Five illustrated worlds:** Outdoors, Space, Dinosaurs, Unicorns and Manga. The new compressed theme packs cover all ten games and have passed host tests. All ten games and five compressed theme packs are now published and require firmware 6; these previews are not a claim of hardware testing in every theme.
 
 ## Project status
 
@@ -25,17 +25,17 @@ This is an experimental DIY project, not a finished consumer toy or a complete p
 | Area | Current status |
 |---|---|
 | Firmware | **Firmware 6 published** as a signed update for the existing development console. On-device verification is next. |
-| Games | Ten games implemented and host-tested across all five themes; the full library rollout follows the firmware update. |
+| Games | All ten games published and host-tested across all five themes. Update to firmware 6 before downloading the new themes. |
 | Storage | Compressed artwork, space checks and PIN-protected game removal, with saved data kept by default. |
 | Downloads | Signed game/theme downloads and Wi-Fi firmware updates. |
 | Recovery | An earlier deliberate crashing-update test returned to the previous firmware, retaining games and settings. |
-| Next | Hardware verification, full theme/game rollout, learning games and a parent app. |
+| Next | Hardware verification, learning games and a parent app. |
 
 ### Updating an existing console
 
 Keep the console charging, then open **Settings → Update firmware**. After restarting, check that About shows **Firmware 6** and allow a full minute for the update to confirm itself.
 
-The firmware is published first with the existing compatible packs. Compressed version-6 themes will follow after on-device confirmation. **Do not install version-6 themes on older firmware.** See [update and recovery steps](STEPS.md).
+Firmware 6 and the full game/theme library are now published. Update the firmware first, then download a version-6 theme through Settings → Themes. Request games through More games and approve them through Settings → Downloads. **Do not install version-6 themes on older firmware.** See [update and recovery steps](STEPS.md).
 
 Firmware 6 passed an ESP32-S3 target build, independent review, host game/layout tests, signature checks and storage/power-cut simulations. Real-device timing, free memory and the firmware-6 OTA still need confirmation; host tests are not hardware tests.
 
@@ -43,7 +43,7 @@ Firmware 6 passed an ESP32-S3 target build, independent review, host game/layout
 
 ![Game design previews: Copy Me, Do It Quick!, Bounce Back, Pop-Up Tap, Switch Off and Hungry Monster](assets/games.jpg)
 
-The ten-game library includes **Snake, Balloons, Tilt, Pet, Copy Me, Do It Quick!, Bounce Back, Pop-Up Tap, Switch Off and Hungry Monster**. It combines memory patterns, quick reactions, paddle play, pop-up tapping and puzzles. The gallery shows design previews; the expanded public game/theme rollout is pending. Display names stay consistent across themes, while internal pack IDs preserve installed-game and save compatibility.
+The ten-game library includes **Snake, Balloons, Tilt, Pet, Copy Me, Do It Quick!, Bounce Back, Pop-Up Tap, Switch Off and Hungry Monster**. It combines memory patterns, quick reactions, paddle play, pop-up tapping and puzzles. The gallery shows design previews; the expanded game/theme library is now available; hardware verification remains in progress. Display names stay consistent across themes, while internal pack IDs preserve installed-game and save compatibility.
 
 Letter activities, counting and matching pairs are also on the ideas list.
 

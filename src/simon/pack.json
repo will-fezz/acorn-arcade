@@ -1,0 +1,17 @@
+{
+ "id": "simon",
+ "title": "Copy Me",
+ "rules_version": 1,
+ "rules_engine": 4,
+ "script": "main.lua",
+ "images": {
+  "meadow": {
+   "file": "bg_meadow.png",
+   "alpha": false
+  },
+  "tl": "sm_tl.png",
+  "tr": "sm_tr.png",
+  "bl": "sm_bl.png",
+  "br": "sm_br.png"
+ }
+}

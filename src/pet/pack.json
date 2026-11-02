@@ -1,0 +1,25 @@
+{
+ "id": "pet",
+ "title": "Pet",
+ "rules_version": 1,
+ "rules_engine": 4,
+ "script": "main.lua",
+ "images": {
+  "burrow": {
+   "file": "bg_burrow.png",
+   "alpha": false
+  },
+  "egg": "pt_egg.png",
+  "hatch": "pt_hatch.png",
+  "grown": "pt_grown.png",
+  "asleep": "pt_asleep.png",
+  "sad": "pt_sad.png",
+  "heart": "pt_heart.png",
+  "ball": "pt_ball.png",
+  "carrot": "pt_carrot.png",
+  "sign_carrot": "pt_sign_carrot.png",
+  "sign_moon": "pt_sign_moon.png",
+  "sign_ball": "pt_sign_ball.png",
+  "sign_heart": "pt_sign_heart.png"
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "id": "mole",
+ "title": "Pop-Up Tap",
+ "rules_version": 1,
+ "rules_engine": 3,
+ "script": "main.lua",
+ "images": {
+  "garden": {
+   "file": "bg_garden.png",
+   "alpha": false
+  },
+  "hole": "mole_hole.png",
+  "peek": "mole_peek.png",
+  "up": "mole_up.png",
+  "bonk": "mole_bonk.png"
+ }
+}

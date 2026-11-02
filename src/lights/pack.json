@@ -1,0 +1,16 @@
+{
+ "id": "lights",
+ "title": "Switch Off",
+ "rules_version": 1,
+ "rules_engine": 3,
+ "script": "main.lua",
+ "images": {
+  "night": {
+   "file": "bg_night.png",
+   "alpha": false
+  },
+  "lit": "ff_lit.png",
+  "off": "ff_off.png",
+  "glow": "ff_glow.png"
+ }
+}

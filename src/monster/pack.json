@@ -1,0 +1,21 @@
+{
+ "id": "monster",
+ "title": "Hungry Monster",
+ "rules_version": 1,
+ "rules_engine": 4,
+ "script": "main.lua",
+ "images": {
+  "picnic": {
+   "file": "bg_picnic.png",
+   "alpha": false
+  },
+  "mochi": "mn_mochi.png",
+  "pip": "mn_pip.png",
+  "nimbus": "mn_nimbus.png",
+  "apple": "mn_apple.png",
+  "straw": "mn_straw.png",
+  "grapes": "mn_grapes.png",
+  "banana": "mn_banana.png",
+  "star": "mn_star.png"
+ }
+}

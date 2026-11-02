@@ -1,7 +1,8 @@
 {
  "slug": "space",
  "title": "Space",
- "version": 4,
+ "version": 6,
+ "deflate": true,
  "draft": true,
  "tile_ring": {
   "color": "4262DA",
@@ -243,6 +244,91 @@
    "hog": "tm_hog.png",
    "puddle": "tm_puddle.png",
    "nest": "tm_nest.png"
+  },
+  "lights": {
+   "night": {
+    "file": "bg_night.png",
+    "alpha": false
+   },
+   "lit": "ff_lit.png",
+   "off": "ff_off.png",
+   "glow": "ff_glow.png"
+  },
+  "pong": {
+   "pond": {
+    "file": "bg_pond.png",
+    "alpha": false
+   },
+   "frog": "pd_frog.png",
+   "dizzy": "pd_dizzy.png",
+   "pad": "pd_pad.png",
+   "splash": "pd_splash.png"
+  },
+  "mole": {
+   "garden": {
+    "file": "bg_garden.png",
+    "alpha": false
+   },
+   "hole": "mole_hole.png",
+   "peek": "mole_peek.png",
+   "up": "mole_up.png",
+   "bonk": "mole_bonk.png"
+  },
+  "simon": {
+   "meadow": {
+    "file": "bg_meadow.png",
+    "alpha": false
+   },
+   "tl": "sm_tl.png",
+   "tr": "sm_tr.png",
+   "bl": "sm_bl.png",
+   "br": "sm_br.png"
+  },
+  "bopit": {
+   "bopit": {
+    "file": "bg_bopit.png",
+    "alpha": false
+   },
+   "idle": "rb_idle.png",
+   "call": "rb_call.png",
+   "cheer": "rb_cheer.png",
+   "sad": "rb_sad.png",
+   "tap": "rb_tap.png",
+   "swipe": "rb_swipe.png",
+   "shake": "rb_shake.png",
+   "worm": "rb_worm.png"
+  },
+  "monster": {
+   "picnic": {
+    "file": "bg_picnic.png",
+    "alpha": false
+   },
+   "mochi": "mn_mochi.png",
+   "pip": "mn_pip.png",
+   "nimbus": "mn_nimbus.png",
+   "apple": "mn_apple.png",
+   "straw": "mn_straw.png",
+   "grapes": "mn_grapes.png",
+   "banana": "mn_banana.png",
+   "star": "mn_star.png"
+  },
+  "pet": {
+   "burrow": {
+    "file": "bg_burrow.png",
+    "alpha": false
+   },
+   "egg": "pt_egg.png",
+   "hatch": "pt_hatch.png",
+   "grown": "pt_grown.png",
+   "asleep": "pt_asleep.png",
+   "sad": "pt_sad.png",
+   "heart": "pt_heart.png",
+   "ball": "pt_ball.png",
+   "carrot": "pt_carrot.png",
+   "sign_carrot": "pt_sign_carrot.png",
+   "sign_moon": "pt_sign_moon.png",
+   "sign_ball": "pt_sign_ball.png",
+   "sign_heart": "pt_sign_heart.png"
   }
  },
  "palette": {
@@ -262,15 +348,16 @@
  "names": {
   "snake": "Rocket",
   "balloons": "Rockets",
-  "mole": "Craters",
-  "lights": "Stars",
-  "pong": "Orbit",
+  "mole": "Pop-Up Tap",
+  "lights": "Switch Off",
+  "pong": "Bounce Back",
   "tilt": "Moon maze",
-  "simon": "Planets",
-  "bopit": "Robot",
-  "monster": "Aliens",
+  "simon": "Copy Me",
+  "bopit": "Do It Quick!",
+  "monster": "Hungry Monster",
   "pet": "Pod",
   "tilt_wall": "5A7FA8",
-  "tilt_wall_sh": "243652"
+  "tilt_wall_sh": "243652",
+  "simon_hub": "59"
  }
 }
