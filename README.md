@@ -13,7 +13,16 @@ Sweetcorn Arcade is a DIY handheld games project built around an ESP32-S3 and a 
 
 Installed games run on the console. Wi-Fi brings new games, themes and signed firmware updates.
 
-> **Development project, not a finished product.** Firmware 6 and the ten-game library are published. Download-memory and saved-data management issues are under investigation. This new name and mascot are a branding update, not a firmware release.
+> **Development project, not a finished product.** Latest firmware: **2026.11.1**. Automated checks passed; real-console verification of the fixes is still pending.
+
+## Latest update — 2026.11.1
+
+- More games updates requested rows in place, preserving scroll position and suppressing duplicate requests during rapid taps.
+- Swiping still works over rows marked **asked** and empty space in the list.
+- Includes firmware 7’s download-memory allocation fix, retained-save deletion and Sweetcorn Arcade branding.
+- Checked with 18,909 host assertions, four rollback checks and a successful ESP32-S3 build. The scrolling regression failed before the fix and passes afterward. The reported device crash still needs real-console confirmation.
+
+Versions now follow **year.month.release**. The OTA catalogue uses the compatible numeric encoding (`20261101`) so existing consoles can upgrade.
 
 ## Pick your game
 
@@ -40,7 +49,7 @@ Five different looks for the same collection of games. Change your theme through
 
 **How artwork works today:** the published theme packs contain game artwork, including pictures for games you have not installed. Removing a game does not currently remove its pictures from a shared theme.
 
-**The next design:** each game pack will carry that game's pictures for all five themes. Theme packs will keep shared interface artwork. Removing a game will then remove its bundled pictures too. This is planned for firmware 7 and is **not yet released**.
+**The next design:** each game pack will carry that game's pictures for all five themes. Theme packs will keep shared interface artwork. Removing a game will then remove its bundled pictures too. Firmware support is included, but the new game-owned packs are **held back** pending real-console confirmation; existing packs remain unchanged.
 
 ## Get playing
 
@@ -48,13 +57,13 @@ Five different looks for the same collection of games. Change your theme through
 
 1. Keep it charging and connected to Wi-Fi.
 2. Open **Settings → Update firmware**.
-3. After restarting, check that About shows **Firmware 6**, and leave it running for a full minute to confirm the update.
+3. After restarting, check that About shows **2026.11.1**, and leave it running for a full minute to confirm the update.
 4. Download a current theme through **Settings → Themes**.
 5. Choose games through **More games**, then approve them under **Settings → Downloads**.
 
-Install firmware 6 before the version-6 themes. See [update and recovery instructions](STEPS.md) for more detail.
+Install the latest firmware before changing themes. See [update and recovery instructions](STEPS.md) for more detail.
 
-**If a download reports insufficient memory:** this is a known report still being investigated. The wording alone does not establish whether working RAM or pack storage is exhausted. Do not erase the console or saved progress as a workaround. Game artwork still in shared themes is a separate storage limitation.
+**If a download reports insufficient memory:** this release includes a fix for the identified working-memory allocation failure. Actual pack storage can still fill up; use grown-up game removal to free space. Do not erase the console or saved progress as a workaround. Please report failures that remain.
 
 ### Starting with a bare board?
 
@@ -66,14 +75,12 @@ This repository is currently a distribution library for an already provisioned c
 
 | Published now | Still being worked on |
 |---|---|
-| Firmware 6 signed update | Firmware 7 game-owned artwork |
-| Ten downloadable game packs | Diagnosis and repair of download-memory failures |
-| Five compressed theme packs | A way to delete retained saves after uninstalling a game |
-| PIN-protected game removal, with saves kept by default | Real-device storage, theme-switching and update checks |
+| Firmware 2026.11.1 signed update | Real-console verification of rapid taps, scrolling and downloads |
+| Ten game packs and five compressed themes | Release of game-owned artwork packs after console confirmation |
+| Retained-save deletion after uninstalling a game | Parent app and automated game submission checks |
+| PIN-protected game removal, with saves kept by default | Full source packaging and security/licence audit |
 
-Keeping progress when uninstalling should not make it impossible to delete later. Retained-save management is part of the requested next update; it is not presented here as fixed.
-
-Firmware 6 passed target-build, host-test and signing checks. Those checks do not replace testing on the actual console. No firmware 7 download is advertised until a build is ready and released.
+Host checks do not replace testing on the actual console. New artwork packs remain held back; this release does not replace existing games or themes.
 
 ## For makers
 
