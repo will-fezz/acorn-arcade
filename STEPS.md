@@ -1,13 +1,20 @@
-# Sweetcorn Arcade 2026.11.3
+# Sweetcorn Arcade 2026.11.4
+
+# Sweetcorn Arcade 2026.11.4
 
 ## Changes
-- Reports the installed theme ID and version to the paired Sweetcorn iPhone app, enabling its console page to match the console theme. Home remains neutral.
-- Preserves existing pairing, approvals, playtime controls, saves, games and themes. No new game or theme packs are included.
+- Paired iPhone can request a signed firmware check/update.
+- Console waits until awake, idle, online and connected to external power; it never interrupts a game, pairing or PIN entry.
+- Durable request state prevents duplicate update starts after restarts. Pending requests expire; disconnecting or revoking access cancels them.
+- App distinguishes request acceptance from a confirmed update, up-to-date result or failure. The new image must complete its normal trial boot before success is reported.
+- Existing pairing, games, themes, saves, approvals and playtime remain unchanged. No game/theme packs are included.
 
-## Install
-Keep the console charging and connected to Wi-Fi. Choose **Settings → Update firmware**. After restart, check **About → 2026.11.3**, leave the console awake for a minute, then reopen Sweetcorn on the phone. The matching console page updates after its next successful sync. Normal OTA preserves data; do not use the full-erase USB installer for this update.
+## Bootstrap installation
+Install this version once using Settings → Update firmware on the console. Older firmware does not implement the phone-update command. Check About → 2026.11.4, leave the console awake for one minute, then Sync in the iPhone app. Future firmware checks/updates can then be requested in the app. Keep the console awake, on Wi-Fi and plugged into power.
 
-## Verification and known limitations
-ESP32-S3 build, 64 companion host checks, 26 server checks, 13 simulator checks and 14 iOS Core checks passed. The redesigned iPhone app is installed and the compatible server schema is active. **Physical-console verification of this firmware and end-to-end theme matching is pending.** Browser USB flashing is also unverified. Sleeping/offline consoles cannot sync; the app stays neutral until it receives a reported theme. Existing experimental private-service companion limitations remain: no public App Store distribution or push notifications.
+Normal signed OTA preserves data. The factory binary is FULL-ERASE recovery/install material, not a recommended update path. No console has been automatically flashed.
 
-New game-owned artwork packs remain held back. Version 2026.11.3 uses compatible numeric image/catalogue version 20261103. The attached binary is app-only; the separate USB installer is full-erase recovery.
+## Verification
+91 sanitizer-backed companion checks, 19226 shell checks, 4 rollback checks and 27 server tests passed. ESP32-S3 release build succeeded. App binary version/header, partition fit, release-key signature and factory app/partition byte identity verified. Physical-console end-to-end update, power behaviour and browser USB flashing remain unverified.
+
+The iPhone app includes Sync, console last-seen/offline feedback and update controls. 15 Swift checks and iOS build passed; installed on the maintainer’s iPhone. Companion service schema is active. Private-service and provisioned-app limitations remain; no public App Store distribution or push notifications. New game-owned packs remain held back.
