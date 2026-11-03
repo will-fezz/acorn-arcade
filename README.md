@@ -101,3 +101,7 @@ There is **no blanket MIT licence grant** for this repository. MIT for original 
 ---
 
 <p align="center"><strong>Small games. Big grins. Sweetcorn Arcade.</strong></p>
+
+## USB installation on Mac and Windows
+
+Open the [Sweetcorn USB installer](https://will-fezz.github.io/acorn-arcade/) in desktop Chrome or Edge. For the Waveshare ESP32-S3-Touch-AMOLED-1.75C (32 MB) only. **Fresh install/recovery erases settings, saves and installed games/themes.** Use Settings → Update firmware on an existing console to keep data. The installer uses released firmware 2026.11.1; iPhone companion control is not included yet. Physical browser USB flashing remains unverified.
