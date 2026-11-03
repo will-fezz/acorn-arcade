@@ -1,1 +1,175 @@
-{"format":2,"packs":[{"id":"balloons","title":"Balloons","kind":"rules","version":1,"engine_min":3,"size":4884,"sha256":"70c48ecaaddf2cd4fdb4e3343cfbfd673825eaf9644e3f40fd2349d8ec8af68a","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/balloons-1.gpk"},{"id":"bopit","title":"Do It Quick!","kind":"rules","version":1,"engine_min":4,"size":5720,"sha256":"af4559922e6d93c07746238240025cb7856c4e039716f554924c28dbcf6736d7","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/bopit-1.gpk"},{"id":"lights","title":"Switch Off","kind":"rules","version":1,"engine_min":3,"size":3236,"sha256":"76d2a415de43391ac5c124164e007f60e81733737e1aa3f233f9f155b8d396ed","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/lights-1.gpk"},{"id":"mole","title":"Pop-Up Tap","kind":"rules","version":1,"engine_min":3,"size":3828,"sha256":"72f51c507c813955721e7fa4a36e751d02be4727d4c3ea3f92dba112adf0b368","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/mole-1.gpk"},{"id":"monster","title":"Hungry Monster","kind":"rules","version":1,"engine_min":4,"size":5828,"sha256":"2e30ccd8f2f2d249c3862f3b20ea7340e94e16b1cddcd650414aace0302699e9","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/monster-1.gpk"},{"id":"pet","title":"Pet","kind":"rules","version":1,"engine_min":4,"size":11840,"sha256":"e47594f52747b7613bcaec23a1509377048cdd12f250dd3d0dba34a777df0c9a","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/pet-1.gpk"},{"id":"pong","title":"Bounce Back","kind":"rules","version":1,"engine_min":3,"size":4496,"sha256":"b4bb914ce48f7e2091339c1160a3f6011274cf2edb5d93e1339893da4287faa6","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/pong-1.gpk"},{"id":"simon","title":"Copy Me","kind":"rules","version":1,"engine_min":4,"size":4808,"sha256":"3d6ed2ad203ba673759509575d38ce5ad2a64efc02dced170eb705f050515e71","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/simon-1.gpk"},{"id":"snake","title":"Snake","kind":"rules","version":3,"engine_min":2,"size":4776,"sha256":"11600023f36e3bacff12205958cfbdab97d1fe2351c39851998a70c6f094d93b","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/snake-3.gpk"},{"id":"tilt","title":"Tilt","kind":"rules","version":1,"engine_min":4,"size":11232,"sha256":"ab0a67894237cb3ea1b6fb60276e1c2eef85bb64c22099019071c255022822e3","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/tilt-1.gpk"},{"id":"theme-dinosaurs","title":"Dinosaurs","kind":"theme","version":6,"engine_min":5,"size":1928232,"sha256":"2742f563274524244d6f70895ea93a87cc32e22e1aa6a134352670a7c0473557","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-dinosaurs-6.gpk","accent":"FF8A3D","accent2":"7ECC54"},{"id":"theme-manga","title":"Manga","kind":"theme","version":6,"engine_min":5,"size":2060200,"sha256":"a300f7001b263672fa2793a2ec352d1dfed89292eef8bea356cb63a057d28be7","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-manga-6.gpk","accent":"E24B4B","accent2":"F3CF5A"},{"id":"theme-outdoors","title":"Outdoors","kind":"theme","version":6,"engine_min":5,"size":1668140,"sha256":"180d6ae81d54bd24dc0cd53408e00dab036298a9d1ae9b1e2567cd9279275e33","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-outdoors-6.gpk","accent":"55AE9F","accent2":"F2B84B"},{"id":"theme-space","title":"Space","kind":"theme","version":6,"engine_min":5,"size":1864492,"sha256":"09a6a8a4c2051351c985f6c6a21c6d58ee10d2ceac055b2d08c0e842d196d2cd","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-space-6.gpk","accent":"70B7FF","accent2":"FFD24A"},{"id":"theme-unicorns","title":"Unicorns","kind":"theme","version":6,"engine_min":5,"size":2103836,"sha256":"3b95d33bb343afe012c4f2de651c2bcea8d6f6f95080fb5959f71640ce9dfa26","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-unicorns-6.gpk","accent":"FF8FC8","accent2":"8FE0C0"},{"id":"acorn-fw","title":"Firmware","kind":"firmware","version":20261101,"engine_min":2,"size":2018848,"sha256":"6fc97f5c09cbe761038ca343eaacdc418aff4282ad07fbf45676ea9762899202","url":"https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/firmware/sweetcorn-fw-2026.11.1.bin"}]}
+{
+  "format": 2,
+  "packs": [
+    {
+      "id": "balloons",
+      "title": "Balloons",
+      "kind": "rules",
+      "version": 1,
+      "engine_min": 3,
+      "size": 4884,
+      "sha256": "70c48ecaaddf2cd4fdb4e3343cfbfd673825eaf9644e3f40fd2349d8ec8af68a",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/balloons-1.gpk"
+    },
+    {
+      "id": "bopit",
+      "title": "Do It Quick!",
+      "kind": "rules",
+      "version": 1,
+      "engine_min": 4,
+      "size": 5720,
+      "sha256": "af4559922e6d93c07746238240025cb7856c4e039716f554924c28dbcf6736d7",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/bopit-1.gpk"
+    },
+    {
+      "id": "lights",
+      "title": "Switch Off",
+      "kind": "rules",
+      "version": 1,
+      "engine_min": 3,
+      "size": 3236,
+      "sha256": "76d2a415de43391ac5c124164e007f60e81733737e1aa3f233f9f155b8d396ed",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/lights-1.gpk"
+    },
+    {
+      "id": "mole",
+      "title": "Pop-Up Tap",
+      "kind": "rules",
+      "version": 1,
+      "engine_min": 3,
+      "size": 3828,
+      "sha256": "72f51c507c813955721e7fa4a36e751d02be4727d4c3ea3f92dba112adf0b368",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/mole-1.gpk"
+    },
+    {
+      "id": "monster",
+      "title": "Hungry Monster",
+      "kind": "rules",
+      "version": 1,
+      "engine_min": 4,
+      "size": 5828,
+      "sha256": "2e30ccd8f2f2d249c3862f3b20ea7340e94e16b1cddcd650414aace0302699e9",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/monster-1.gpk"
+    },
+    {
+      "id": "pet",
+      "title": "Pet",
+      "kind": "rules",
+      "version": 1,
+      "engine_min": 4,
+      "size": 11840,
+      "sha256": "e47594f52747b7613bcaec23a1509377048cdd12f250dd3d0dba34a777df0c9a",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/pet-1.gpk"
+    },
+    {
+      "id": "pong",
+      "title": "Bounce Back",
+      "kind": "rules",
+      "version": 1,
+      "engine_min": 3,
+      "size": 4496,
+      "sha256": "b4bb914ce48f7e2091339c1160a3f6011274cf2edb5d93e1339893da4287faa6",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/pong-1.gpk"
+    },
+    {
+      "id": "simon",
+      "title": "Copy Me",
+      "kind": "rules",
+      "version": 1,
+      "engine_min": 4,
+      "size": 4808,
+      "sha256": "3d6ed2ad203ba673759509575d38ce5ad2a64efc02dced170eb705f050515e71",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/simon-1.gpk"
+    },
+    {
+      "id": "snake",
+      "title": "Snake",
+      "kind": "rules",
+      "version": 3,
+      "engine_min": 2,
+      "size": 4776,
+      "sha256": "11600023f36e3bacff12205958cfbdab97d1fe2351c39851998a70c6f094d93b",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/snake-3.gpk"
+    },
+    {
+      "id": "tilt",
+      "title": "Tilt",
+      "kind": "rules",
+      "version": 1,
+      "engine_min": 4,
+      "size": 11232,
+      "sha256": "ab0a67894237cb3ea1b6fb60276e1c2eef85bb64c22099019071c255022822e3",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/tilt-1.gpk"
+    },
+    {
+      "id": "theme-dinosaurs",
+      "title": "Dinosaurs",
+      "kind": "theme",
+      "version": 6,
+      "engine_min": 5,
+      "size": 1928232,
+      "sha256": "2742f563274524244d6f70895ea93a87cc32e22e1aa6a134352670a7c0473557",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-dinosaurs-6.gpk",
+      "accent": "FF8A3D",
+      "accent2": "7ECC54"
+    },
+    {
+      "id": "theme-manga",
+      "title": "Manga",
+      "kind": "theme",
+      "version": 6,
+      "engine_min": 5,
+      "size": 2060200,
+      "sha256": "a300f7001b263672fa2793a2ec352d1dfed89292eef8bea356cb63a057d28be7",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-manga-6.gpk",
+      "accent": "E24B4B",
+      "accent2": "F3CF5A"
+    },
+    {
+      "id": "theme-outdoors",
+      "title": "Outdoors",
+      "kind": "theme",
+      "version": 6,
+      "engine_min": 5,
+      "size": 1668140,
+      "sha256": "180d6ae81d54bd24dc0cd53408e00dab036298a9d1ae9b1e2567cd9279275e33",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-outdoors-6.gpk",
+      "accent": "55AE9F",
+      "accent2": "F2B84B"
+    },
+    {
+      "id": "theme-space",
+      "title": "Space",
+      "kind": "theme",
+      "version": 6,
+      "engine_min": 5,
+      "size": 1864492,
+      "sha256": "09a6a8a4c2051351c985f6c6a21c6d58ee10d2ceac055b2d08c0e842d196d2cd",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-space-6.gpk",
+      "accent": "70B7FF",
+      "accent2": "FFD24A"
+    },
+    {
+      "id": "theme-unicorns",
+      "title": "Unicorns",
+      "kind": "theme",
+      "version": 6,
+      "engine_min": 5,
+      "size": 2103836,
+      "sha256": "3b95d33bb343afe012c4f2de651c2bcea8d6f6f95080fb5959f71640ce9dfa26",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/packs/theme-unicorns-6.gpk",
+      "accent": "FF8FC8",
+      "accent2": "8FE0C0"
+    },
+    {
+      "id": "acorn-fw",
+      "title": "Firmware",
+      "kind": "firmware",
+      "version": 20261101,
+      "engine_min": 2,
+      "size": 2018848,
+      "sha256": "6fc97f5c09cbe761038ca343eaacdc418aff4282ad07fbf45676ea9762899202",
+      "url": "https://raw.githubusercontent.com/will-fezz/acorn-arcade/main/firmware/sweetcorn-fw-2026.11.1.bin"
+    }
+  ]
+}
