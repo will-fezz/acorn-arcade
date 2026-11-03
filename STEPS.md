@@ -1,20 +1,43 @@
-# Sweetcorn Arcade 2026.11.4
+# Sweetcorn Arcade 2026.11.5
 
-# Sweetcorn Arcade 2026.11.4
+# Sweetcorn Arcade 2026.11.5
 
-## Changes
-- Paired iPhone can request a signed firmware check/update.
-- Console waits until awake, idle, online and connected to external power; it never interrupts a game, pairing or PIN entry.
-- Durable request state prevents duplicate update starts after restarts. Pending requests expire; disconnecting or revoking access cancels them.
-- App distinguishes request acceptance from a confirmed update, up-to-date result or failure. The new image must complete its normal trial boot before success is reported.
-- Existing pairing, games, themes, saves, approvals and playtime remain unchanged. No game/theme packs are included.
+Moves brightness, volume, screen-off time, idle clock, game removal, saved-data
+deletion, themes, 30 extra minutes and console passcode management into the
+Sweetcorn iPhone app. These controls are removed from the console menu; Wi-Fi,
+PIN-protected pairing and recovery remain on the console.
 
-## Bootstrap installation
-Install this version once using Settings → Update firmware on the console. Older firmware does not implement the phone-update command. Check About → 2026.11.4, leave the console awake for one minute, then Sync in the iPhone app. Future firmware checks/updates can then be requested in the app. Keep the console awake, on Wi-Fi and plugged into power.
+Normal game removal keeps saves unless explicitly selected otherwise. Saved
+data can also be deleted independently, including after a game is removed.
+Changing a theme keeps the previous theme until its signed replacement is ready.
+The app distinguishes theme request acceptance from confirmed activation.
 
-Normal signed OTA preserves data. The factory binary is FULL-ERASE recovery/install material, not a recommended update path. No console has been automatically flashed.
+30 extra minutes overrides play-hour restrictions for 30 wall-clock minutes
+from console execution; it does not change the daily allowance. It survives
+restart without being extended by replay. Interrupted phone operations are
+reconciled before new gameplay can create save data.
 
 ## Verification
-91 sanitizer-backed companion checks, 19226 shell checks, 4 rollback checks and 27 server tests passed. ESP32-S3 release build succeeded. App binary version/header, partition fit, release-key signature and factory app/partition byte identity verified. Physical-console end-to-end update, power behaviour and browser USB flashing remain unverified.
 
-The iPhone app includes Sync, console last-seen/offline feedback and update controls. 15 Swift checks and iOS build passed; installed on the maintainer’s iPhone. Companion service schema is active. Private-service and provisioned-app limitations remain; no public App Store distribution or push notifications. New game-owned packs remain held back.
+- 109 companion protocol/replay/privacy checks passed.
+- 13,547 real-LVGL shell/layout/input/power/UI checks passed with signed theme6
+  fixtures, plus four firmware-rollback checks.
+- Pack-room/removal scope and saved-data deletion tests passed.
+- ESP-IDF ESP32-S3 build passed with no warnings.
+- Emitted C++ snapshot validated against the deployed service schema.
+- Firmware release-key signature and image version 20261105 verified.
+- Matching factory app, partition table and OTA-data bytes verified; factory
+  header DIO / 80 MHz / 32 MB verified.
+
+**Physical-console end-to-end controls, OTA and USB flashing remain unverified.**
+No console has been automatically flashed. The iPhone app and private companion service are updated; public App Store distribution and push notifications are not available. New game-owned packs remain held back.
+
+## Installation
+
+Preferred: from Sweetcorn, request firmware update while the console is awake,
+on Wi-Fi and connected to power. Firmware 2026.11.4 already supports app-started
+updates. Normal OTA preserves installed games and saved data.
+
+**Factory image: FULL ERASE / fresh USB installation only.** Do not use it as a
+normal update. Factory installation can erase Wi-Fi settings, pairing, games,
+passcode and saved progress. No factory installation was performed here.
