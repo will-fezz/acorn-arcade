@@ -1,52 +1,42 @@
-# Firmware 6: every game in every theme, and theme changes that fit
+# Sweetcorn Arcade firmware 7 — update order
 
-Nothing here has been published or sent to the console. Keep USB ready. GitHub's raw files can take about 5 minutes to refresh. Everything is signed with the real key, which firmware 3 and 5 already trust.
+This is a staged development release. Do not claim it has been tested on the console until the checks below have actually been done. The existing `will-fezz/acorn-arcade` repository address, signing keys and game/save IDs are unchanged.
 
-## What changes
+## 1. Update firmware first
 
-- Themes go to version 6 and store their art deflated (zlib). A theme with all ten games is about 1.6 to 2.0 MB (7 to 9 of the packs partition's 94 slots) instead of 11 MB (44 to 45). Two themes and ten games now fit with room to spare, so changing theme works again, from any layout seen in the flash budget check.
-- The console unpacks art into PSRAM as before: the menus' art once per theme change, a game's art when it starts. It uses the inflater in the chip's ROM, and checks each image's length and its Adler-32. A theme whose art does not unpack is refused when it is downloaded (the old theme carries on), and one damaged later is caught by the check at every boot.
-- Firmware 6 still reads version 4 and 5 themes, so nothing changes until a version 6 theme is downloaded.
-- More games says "No new games right now" when every game is installed. Shop, tiles and on-screen titles use the approved names in every theme: Copy Me, Do It Quick!, Bounce Back, Pop-Up Tap, Switch Off and Hungry Monster. Pack IDs stay unchanged.
-- For games (engine 5): `sys.time`, `sys.save`/`sys.load`, `gfx.recolor`, `gfx.box`. Pet now keeps its full state and the real time, as the old built-in Pet did.
+Publish only the `step-1-bridge` files listed in the parent delivery's `PUBLISH-FILES.txt`. Its catalogue retains today's version-6 themes and rules, and offers firmware 7. Keep the console charging, choose Settings → Update firmware, and check About shows 7. Leave it running for at least a minute so the trial confirms. No packs can be installed during the trial.
 
-## Storage and removal
+The reserved downloader stack in firmware 7 cannot repair the already-running firmware 6 before the update. If the firmware-6 updater itself cannot complete, preserve the console and its saved data; use the documented board-specific recovery with the operator, not an erase-all shortcut.
 
-Settings is protected by the grown-up passcode. Games on this console lists installed games and their sizes. Removing asks for confirmation: **Remove, keep its data** is the default; **Remove and delete its data** also clears that game's saved state. Activity history is always retained. With kept data, reinstalling the same pack ID restores it. Removed games return to More games.
+## 2. Upgrade installed games, then the theme
 
-The console checks total free space and the largest contiguous free run before a game or theme download. When fragmentation is the only obstacle, it safely relocates verified small game-rule packs before downloading; a copied pack is verified and committed before its old copy is retired. Themes and saved data are not moved. If it cannot fit, the child sees “Not enough room — ask a grown-up”; the grown-up can go straight to the removal page. About shows used and free storage. Removing rules does not rewrite the shared theme pack: that game's artwork is no longer loaded or used, but shared-theme flash bytes are reclaimed only by replacing the theme.
+After firmware 7 is confirmed on the console, publish `step-2-full` as listed. The full catalogue retains old entries for firmware 6; firmware 7 chooses the newest compatible version and shows one row per item.
 
-## Why two steps
+1. Open More games → Look for games. Installed games with new packs appear here too.
+2. Request version-7 packs for the games you already have. Approve them in Settings → Downloads. Download one at a time. Existing progress and game IDs are retained.
+3. Then use Settings → Themes → Look for themes and update the current theme to version 7.
+4. If a legacy rules-only game is still installed, the small theme will be refused with “Update installed games first, then this theme”. The old theme remains. Update or remove that game and retry the theme.
 
-Firmware 5 hides a pack it cannot read, but when the catalogue has a newer version of a theme, it takes the newest and refuses it ("needs a newer firmware"). Version 6 themes need firmware 6. So firmware 6 goes out first with the packs that are on `main` today, and the version 6 themes only once the console runs firmware 6.
+Each version-7 game bundle contains its code, gameplay pictures and selector tile for **all five themes**. Only the selected theme's gameplay pictures are loaded into RAM. Version-7 themes hold the shared interface, palette and names; they have no game pictures. Removing a bundled game frees all of its bundled pictures, including all five tiles. Until the old shared theme has been replaced, it still holds its legacy copy of the pictures.
 
-## 1. Publish the bridge: firmware 6 only
-From `step-1-bridge/`, copy to the `main` branch of `will-fezz/acorn-arcade`:
-- `catalogue.json`, `catalogue.json.sig`
-- `firmware/acorn-fw-6.bin`, `firmware/acorn-fw-6.bin.sig`
-- `STEPS.md`, `README.md`, `THIRD-PARTY.md`
+All five sets in each game mean installing every game uses more flash than keeping just one old full theme. The benefit is ownership and predictable removal, not a promise that every installation uses fewer bytes. Allocation is in 256 KiB slots; Settings shows allocated storage, not just compressed file size. Multi-slot bundles are not moved by the legacy rules-only compactor. If there is insufficient contiguous storage, remove an unwanted game and retry; live packs are never erased just to force an update to fit.
 
-Every pack it lists (Snake 3, Balloons 1, Tilt 1, themes 4) is byte for byte what is on `main` now, so `packs/` needs no change. `acorn-fw-5.bin` can stay or go: the catalogue no longer lists it.
+## Saved data
 
-## 2. Update the firmware
-On the charger, close to the access point: Settings tile, passcode, scroll down, Update firmware.
+Settings → Saved game data lists scores/progress even for removed games. Select the game, then explicitly confirm Delete saved data. Cancel leaves it untouched. This does not uninstall a game or erase play history, settings, other games or version floors. Retained saves live in settings storage, not the game-pack partition; deleting them is not a solution to a pack-storage shortage.
 
-**You should see:** after the restart, About says Firmware 6 and "New: Every game in every theme". The menus look exactly as before (still the version 4 theme). Wait a full minute: until the new firmware confirms itself, downloads say "just updated, try again in a minute".
+## Memory diagnostics
 
-## 3. Publish the full release
-From `step-2-full/`, copy `catalogue.json`, `catalogue.json.sig`, `packs/`, `src/` and `themes/` to `main` (firmware and the rest are the same as step 1). Do not copy `packs-seed.bin.usb-only`. The version 4 theme files on `main` are no longer listed and can be deleted.
+The exact old “no memory for download” message came from failing to allocate a new 10,240-byte internal-RAM task stack. Firmware 7 reserves one permanent internal stack shared by catalogue refresh, pack downloads, firmware updates and boot pack checks. It is not deleted/reallocated between jobs. HTTPS still needs working memory, and failures there are distinguished from insufficient pack storage.
 
-## 4. On the console
-1. Settings, Themes, Look for themes, then tap the theme in use (download icon). It brings version 6: about 2 MB; download time depends on Wi-Fi.
-2. More games: ask for each new game (Switch Off, Bounce Back, Pop-Up Tap, Copy Me, Do It Quick!, Hungry Monster, Pet). Settings, Downloads: Allow.
-3. Play each one. A game asked for before step 1 shows "this theme has no art for that game" until the theme is version 6.
-4. Change theme: Settings, Themes, pick another. It should download and switch. Then change back. Both work with every game installed.
-5. When every game is in, More games says "No new games right now".
+## Required on-console checks
 
-**If a theme says "theme refused"** right after its download: the art did not unpack on the console, and the old theme carries on. Stop and send the serial log (packs: "theme ... refused: bad contents"). Nothing else is affected.
+- Firmware 6 → 7 OTA succeeds; About says 7; no trial rollback or watchdog crash.
+- Update all installed games, then the current theme; existing progress survives.
+- Switch all five themes, launch each installed game, and inspect the selector tile/art.
+- Remove a game with Keep saved data on: allocated pack space increases and its tile vanishes. Reinstall: progress returns.
+- Remove it again; Settings → Saved game data still lists it. Cancel deletion once, then confirm. Reinstall: that game's progress is reset; other saves and play history remain.
+- Repeat catalogue refresh, successful/failed downloads and game launches; record internal free/largest block and worker stack high-water mark from logs. Host tests do not establish hardware free-memory figures or display timing.
+- Test a weak/disconnected network gracefully; do not deliberately interrupt a real update without a separate recovery test plan.
 
-## Firmware 3 and 5 on this catalogue
-- Firmware 5 (step 2): offered firmware 6 and the ten games, not the version 6 themes. Its version 4 theme stays; the seven new games say they have no art until the console has firmware 6.
-- Firmware 3 lists everything and refuses after the download what it cannot run, as before. It still finds firmware 6.
-
-If something is wrong: firmware 5 is still in the other slot. Rollback only happens on a crash in the first minute; for a firmware that runs but misbehaves, the fix is a firmware 7, or USB. A version 6 theme cannot be read by firmware 5: going back to firmware 5 by USB needs a version 4 theme from the USB seed.
+Never downgrade firmware manually to one unable to read installed bundle packs. Do not change repository URLs or trust keys as part of this update.
