@@ -1,91 +1,96 @@
-<p align="center"><img src="assets/acorn-mascot.png" width="240" alt="Acorn Arcade cartoon acorn mascot"></p>
+<p align="center">
+  <img src="assets/sweetcorn-mascot.png" width="300" alt="Sweetcorn Arcade — a cheerful cartoon sweetcorn holding a round games console">
+</p>
 
-# Acorn Arcade
+<h1 align="center">Sweetcorn Arcade</h1>
+<p align="center"><strong>A little console. A whole lot of play.</strong></p>
+<p align="center">10 games · 5 illustrated themes · 1 tiny round touchscreen</p>
+<p align="center"><a href="#pick-your-game">Games</a> · <a href="#choose-your-world">Themes</a> · <a href="#get-playing">Get started</a> · <a href="#on-the-workbench">Development</a></p>
 
-**Small screen. Big imagination.**
+---
 
-A little round games console for curious hands — and grown-ups who like making things. Built around an ESP32-S3 and a colourful 1.75-inch AMOLED touchscreen, it brings together bite-sized Lua games and illustrated worlds.
+Sweetcorn Arcade is a DIY handheld games project built around an ESP32-S3 and a 1.75-inch AMOLED touchscreen. Tap, tilt, remember and react in short games, then change the scenery with a different illustrated theme.
 
-![Round Acorn console design preview](assets/hero.jpg)
+Installed games run on the console. Wi-Fi brings new games, themes and signed firmware updates.
 
-> **Experimental DIY project · updated 2 November 2026.** Images below are screen renders and design previews, not product photographs. Acorn Arcade is a working name; see the naming and licensing notes below.
+> **Development project, not a finished product.** Firmware 6 and the ten-game library are published. Download-memory and saved-data management issues are under investigation. This new name and mascot are a branding update, not a firmware release.
 
-## A little world of play
+## Pick your game
 
-Tap balloons, guide a snake and explore short, friendly activities on a small touchscreen. Themes change the scenery while keeping each game's identity consistent.
-
-![Outdoors, Space, Dinosaurs, Unicorns and Manga theme previews](assets/themes.jpg)
-
-**Five illustrated worlds:** Outdoors, Space, Dinosaurs, Unicorns and Manga. The new compressed theme packs cover all ten games and have passed host tests. All ten games and five compressed theme packs are now published and require firmware 6; these previews are not a claim of hardware testing in every theme.
-
-## Project status
-
-This is an experimental DIY project, not a finished consumer toy or a complete public firmware kit.
-
-| Area | Current status |
+| Game | The idea |
 |---|---|
-| Firmware | **Firmware 6 published** as a signed update for the existing development console. On-device verification is next. |
-| Games | All ten games published and host-tested across all five themes. Update to firmware 6 before downloading the new themes. |
-| Storage | Compressed artwork, space checks and PIN-protected game removal, with saved data kept by default. |
-| Downloads | Signed game/theme downloads and Wi-Fi firmware updates. |
-| Recovery | An earlier deliberate crashing-update test returned to the previous firmware, retaining games and settings. |
-| Next | Hardware verification, learning games and a parent app. |
+| **Snake** | Guide a growing snake. |
+| **Balloons** | Tap and pop balloons. |
+| **Tilt** | Play using the console's tilt controls. |
+| **Pet** | Look after a little virtual companion. |
+| **Copy Me** | Watch a pattern and repeat it. |
+| **Do It Quick!** | React to the next instruction. |
+| **Bounce Back** | Keep the ball in play. |
+| **Pop-Up Tap** | Catch the pop-ups with a tap. |
+| **Switch Off** | Work through a lights puzzle. |
+| **Hungry Monster** | Feed a hungry character. |
 
-### Updating an existing console
+All ten appear in the [published catalogue](catalogue.json). Host testing covers the games across five themes; complete real-device verification is still in progress.
 
-Keep the console charging, then open **Settings → Update firmware**. After restarting, check that About shows **Firmware 6** and allow a full minute for the update to confirm itself.
+## Choose your world
 
-Firmware 6 and the full game/theme library are now published. Update the firmware first, then download a version-6 theme through Settings → Themes. Request games through More games and approve them through Settings → Downloads. **Do not install version-6 themes on older firmware.** See [update and recovery steps](STEPS.md).
+**Outdoors** · **Space** · **Dinosaurs** · **Unicorns** · **Manga**
 
-Firmware 6 passed an ESP32-S3 target build, independent review, host game/layout tests, signature checks and storage/power-cut simulations. Real-device timing, free memory and the firmware-6 OTA still need confirmation; host tests are not hardware tests.
+Five different looks for the same collection of games. Change your theme through **Settings → Themes**.
 
-## Games taking shape
+**How artwork works today:** the published theme packs contain game artwork, including pictures for games you have not installed. Removing a game does not currently remove its pictures from a shared theme.
 
-![Game design previews: Copy Me, Do It Quick!, Bounce Back, Pop-Up Tap, Switch Off and Hungry Monster](assets/games.jpg)
+**The next design:** each game pack will carry that game's pictures for all five themes. Theme packs will keep shared interface artwork. Removing a game will then remove its bundled pictures too. This is planned for firmware 7 and is **not yet released**.
 
-The ten-game library includes **Snake, Balloons, Tilt, Pet, Copy Me, Do It Quick!, Bounce Back, Pop-Up Tap, Switch Off and Hungry Monster**. It combines memory patterns, quick reactions, paddle play, pop-up tapping and puzzles. The gallery shows design previews; the expanded game/theme library is now available; hardware verification remains in progress. Display names stay consistent across themes, while internal pack IDs preserve installed-game and save compatibility.
+## Get playing
 
-Letter activities, counting and matching pairs are also on the ideas list.
+### Already have the development console?
 
-## Hardware and building
+1. Keep it charging and connected to Wi-Fi.
+2. Open **Settings → Update firmware**.
+3. After restarting, check that About shows **Firmware 6**, and leave it running for a full minute to confirm the update.
+4. Download a current theme through **Settings → Themes**.
+5. Choose games through **More games**, then approve them under **Settings → Downloads**.
 
-The development console uses the **Waveshare ESP32-S3-Touch-AMOLED-1.75C / 32 MB configuration**. You will also need a USB data cable and a computer.
+Install firmware 6 before the version-6 themes. See [update and recovery instructions](STEPS.md) for more detail.
 
-The 1.75 and 1.75C variants have different pin assignments and flash sizes. Their firmware must not be treated as interchangeable.
+**If a download reports insufficient memory:** this is a known report still being investigated. The wording alone does not establish whether working RAM or pack storage is exhausted. Do not erase the console or saved progress as a workaround. Game artwork still in shared themes is a separate storage limitation.
 
-A reproducible public build still needs the complete firmware source, pinned dependencies, board configuration, partition layout and verified build/flash instructions. The published firmware is an update for an already provisioned development console, not a complete first-flash kit or a one-command build. Assembly and flashing are adult tasks; supervise use of experimental hardware.
+### Starting with a bare board?
 
-## Local play, connected downloads
+The development target is the **Waveshare ESP32-S3-Touch-AMOLED-1.75C, 32 MB configuration**. The 1.75 and 1.75C variants are not interchangeable.
 
-Installed games are designed to run on the console. Wi-Fi is used for setup and downloads. Settings, saved progress and play-duration records may be stored locally; download services can receive ordinary connection information such as an IP address.
+This repository is currently a distribution library for an already provisioned console, **not a complete first-flash kit or reproducible public firmware build**. Complete source packaging, pinned dependencies and verified setup instructions remain to be prepared. Hardware assembly and flashing are adult tasks.
 
-No advertising is planned in the game experience. A future contribution programme will prohibit tracking and collection of children's information. A parent app and remote approval features are proposals, not current services.
+## On the workbench
 
-## Updates and security
+| Published now | Still being worked on |
+|---|---|
+| Firmware 6 signed update | Firmware 7 game-owned artwork |
+| Ten downloadable game packs | Diagnosis and repair of download-memory failures |
+| Five compressed theme packs | A way to delete retained saves after uninstalling a game |
+| PIN-protected game removal, with saves kept by default | Real-device storage, theme-switching and update checks |
 
-Game packs and the catalogue use cryptographic signatures. Firmware downloads are checked against a signed catalogue, hash and signature. These checks help reject altered or unauthorised downloads; they do not establish that approved code is bug-free.
+Keeping progress when uninstalling should not make it impossible to delete later. Retained-save management is part of the requested next update; it is not presented here as fixed.
 
-Games use a restricted Lua host. Review and resource limits still need real-hardware testing. Development builds have trusted both test and release keys; retiring test-key trust and documenting recovery remain release tasks. Private signing keys must never be included in source, pull requests or untrusted CI jobs.
+Firmware 6 passed target-build, host-test and signing checks. Those checks do not replace testing on the actual console. No firmware 7 download is advertised until a build is ready and released.
 
-## Contributing games
+## For makers
 
-The community submission process is being prepared. A proposed game should include:
+The games use Lua inside a restricted host. Downloads are checked using signed catalogues and packs; firmware also has hash, signature and image checks. Signing protects authenticity, not against every bug. Test-key retirement and the final security/dependency audit remain release work.
 
-- Lua source and a manifest.
-- Preview images and clear play instructions.
-- Creator, source and licence details for every image, font and sound.
-- Notes on memory use, saved data and theme support.
+Want to propose a game? Open an issue or pull request with the idea, controls, Lua source, memory/save requirements, theme artwork and the origin and licence of every asset. The intended route is review, hardware playtesting, then maintainer signing. Automated submission checks are not yet operational.
 
-The intended route is **pull request → rights and code review → hardware playtest → maintainer signing and release**. Automated checks are planned, not operational. A merged pull request would not automatically publish a game.
+Keep contributions free of advertising, tracking, purchases and chat. Installed play is local; settings, progress and play-duration records can be stored on the device. Download hosts receive normal connection information. A parent app is an idea, not an available feature.
 
-Submissions should contain no ads, tracking, purchases, chat or external links, and should use independently created or appropriately licensed code, artwork and audio.
+## Name, artwork and licences
 
-## Names, artwork and licensing
+**Sweetcorn Arcade** is the new project name, replacing Acorn Arcade. The repository address and internal identifiers still use `acorn-arcade` / `acorn` to preserve existing update URLs and compatibility. Older firmware may still show the previous branding.
 
-**Public branding is not yet cleared.** [Acorn Arcade](https://www.acornarcade.com/) already has live games-related use. Copy Me, Bounce Back, Switch Off and Hungry Monster also have relevant existing uses. The new display names are implemented in firmware 6; internal game IDs are unchanged. UK, EU and US registry checks remain incomplete.
+The mascot was newly AI-generated for this rebrand. Names are not represented as trademark-cleared, and a new name does not settle rights in third-party game names or assets.
 
-Game ideas and rules are distinct from protected code, artwork, audio and presentation. Renaming a game does not resolve copied expression or trade-dress concerns.
+There is **no blanket MIT licence grant** for this repository. MIT for original code remains proposed pending an authorised notice; third-party code, fonts and artwork retain their own terms. Read [THIRD-PARTY.md](THIRD-PARTY.md) and the bundled notices. The complete provenance and licence audit remains unfinished.
 
-**MIT is proposed for original project code**, but the authorised copyright notice and actual licence grant still need to be added. Do not infer a blanket licence from this README. See [third-party notices](THIRD-PARTY.md). Third-party components retain their own terms, including LVGL/Lua (MIT), libsodium (ISC), Sniglet/Nunito fonts (SIL OFL), and Tilt-a-tron-derived code (MIT). The final dependency and notice audit is unfinished.
+---
 
-Development illustrations include AI-assisted/generated artwork. Per-file provenance, reference permissions and redistribution rights remain under review; exclusive copyright is not promised. No affiliation with other game or computer brands is implied.
+<p align="center"><strong>Small games. Big grins. Sweetcorn Arcade.</strong></p>
