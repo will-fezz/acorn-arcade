@@ -13,51 +13,43 @@ Sweetcorn Arcade is a DIY handheld games project built around an ESP32-S3 and a 
 
 Installed games run on the console. Wi-Fi brings new games, themes and signed firmware updates.
 
-> **Development project, not a finished product.** Latest firmware: **2026.11.5**. Automated checks passed; real-console verification of the fixes is still pending.
+> **Development project, not a finished product.** Latest firmware: **2026.11.6**. Automated checks passed; real-console verification of the fixes is still pending.
 
-## Latest update — 2026.11.5
+## Latest update — 2026.11.6
 
-# Sweetcorn Arcade 2026.11.5
+# Sweetcorn Arcade 2026.11.6
 
-Moves brightness, volume, screen-off time, idle clock, game removal, saved-data
-deletion, themes, 30 extra minutes and console passcode management into the
-Sweetcorn iPhone app. These controls are removed from the console menu; Wi-Fi,
-PIN-protected pairing and recovery remain on the console.
+Fixes missing Play activity in the Sweetcorn iPhone app. The console now sends
+per-game totals from its 30 most recent completed play sessions, including
+existing recorded sessions. Minutes are rounded up after summing each game.
+This is recent recorded history, not a daily total or live gameplay timer.
+An unavailable log remains unknown rather than being reported as zero.
 
-Normal game removal keeps saves unless explicitly selected otherwise. Saved
-data can also be deleted independently, including after a game is removed.
-Changing a theme keeps the previous theme until its signed replacement is ready.
-The app distinguishes theme request acceptance from confirmed activation.
+App-requested firmware updates can now start with battery strictly above 25%,
+or while connected to external power. Unknown battery requires external power.
+The console must still be awake, idle and on Wi-Fi; signature and rollback
+safeguards are unchanged.
 
-30 extra minutes overrides play-hour restrictions for 30 wall-clock minutes
-from console execution; it does not change the daily allowance. It survives
-restart without being extended by replay. Interrupted phone operations are
-reconciled before new gameplay can create save data.
+## Verification and limitations
 
-## Verification
-
-- 109 companion protocol/replay/privacy checks passed.
-- 13,547 real-LVGL shell/layout/input/power/UI checks passed with signed theme6
-  fixtures, plus four firmware-rollback checks.
-- Pack-room/removal scope and saved-data deletion tests passed.
-- ESP-IDF ESP32-S3 build passed with no warnings.
-- Emitted C++ snapshot validated against the deployed service schema.
-- Firmware release-key signature and image version 20261105 verified.
-- Matching factory app, partition table and OTA-data bytes verified; factory
-  header DIO / 80 MHz / 32 MB verified.
-
-**Physical-console end-to-end controls, OTA and USB flashing remain unverified.**
-No console has been automatically flashed. The iPhone app and private companion service are updated; public App Store distribution and push notifications are not available. New game-owned packs remain held back.
+- 115 companion checks passed, including battery boundary and activity reporting.
+- Activity aggregation checks passed with address/undefined-behavior sanitizers.
+- Nonempty C++ activity snapshot passed the deployed service schema.
+- ESP-IDF ESP32-S3 release build passed; signed image and factory layout verified.
+- Catalogue checked with the shipped C parser; game/theme entries unchanged.
+- Physical-console activity reporting and this update's OTA remain unverified.
+- No new game-owned packs are published in this release.
 
 ## Installation
 
-Preferred: from Sweetcorn, request firmware update while the console is awake,
-on Wi-Fi and connected to power. Firmware 2026.11.4 already supports app-started
-updates. Normal OTA preserves installed games and saved data.
+Use the normal firmware update from Sweetcorn or the console. For the first
+update from 2026.11.5 or older, connect external power because the installed
+firmware still requires it. Keep the console awake, idle and on Wi-Fi.
+Normal OTA preserves games and saved progress. Publication does not initiate
+installation on your console.
 
-**Factory image: FULL ERASE / fresh USB installation only.** Do not use it as a
-normal update. Factory installation can erase Wi-Fi settings, pairing, games,
-passcode and saved progress. No factory installation was performed here.
+The matching USB factory installer is for fresh installation only: **FULL ERASE**
+can remove Wi-Fi settings, pairing, games, passcode and saved progress.
 
 ## Pick your game
 
@@ -92,7 +84,7 @@ Five different looks for the same collection of games. Change your theme through
 
 1. Keep it charging and connected to Wi-Fi.
 2. Open **Settings → Update firmware**.
-3. After restarting, check that About shows **2026.11.5**, and leave it running for a full minute to confirm the update.
+3. After restarting, check that About shows **2026.11.6**, and leave it running for a full minute to confirm the update.
 4. Download a current theme through **Settings → Themes**.
 5. Choose games through **More games**, then approve them under **Settings → Downloads**.
 
@@ -110,7 +102,7 @@ This repository is currently a distribution library for an already provisioned c
 
 | Published now | Still being worked on |
 |---|---|
-| Firmware 2026.11.5 signed update | Real-console verification of rapid taps, scrolling and downloads |
+| Firmware 2026.11.6 signed update | Real-console verification of rapid taps, scrolling and downloads |
 | Ten game packs and five compressed themes | Release of game-owned artwork packs after console confirmation |
 | Retained-save deletion after uninstalling a game | Physical pairing tests, app distribution and automated game submission checks |
 | PIN-protected game removal, with saves kept by default | Full source packaging and security/licence audit |
@@ -139,4 +131,4 @@ There is **no blanket MIT licence grant** for this repository. MIT for original 
 
 ## USB installation on Mac and Windows
 
-Open the [Sweetcorn USB installer](https://will-fezz.github.io/acorn-arcade/) in desktop Chrome or Edge. For the Waveshare ESP32-S3-Touch-AMOLED-1.75C (32 MB) only. **Fresh install/recovery erases settings, saves and installed games/themes.** Use Settings → Update firmware on an existing console to keep data. The installer uses released firmware 2026.11.5, including experimental private-instance companion support. Physical browser USB flashing remains unverified.
+Open the [Sweetcorn USB installer](https://will-fezz.github.io/acorn-arcade/) in desktop Chrome or Edge. For the Waveshare ESP32-S3-Touch-AMOLED-1.75C (32 MB) only. **Fresh install/recovery erases settings, saves and installed games/themes.** Use Settings → Update firmware on an existing console to keep data. The installer uses released firmware 2026.11.6, including experimental private-instance companion support. Physical browser USB flashing remains unverified.
