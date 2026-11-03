@@ -1,19 +1,13 @@
-# Sweetcorn Arcade 2026.11.2
+# Sweetcorn Arcade 2026.11.3
 
 ## Changes
-- Adds PIN-gated phone pairing: start on the console, scan or enter its code in the authenticated Sweetcorn app, then confirm physically on the console. Codes expire after five minutes.
-- Adds remote game approval/denial, playtime settings and status snapshots while the console is awake. Approved games still need a successful signed download before they appear installed.
-- Credentials and request identities persist; expired, stale and replayed commands are guarded by a durable receipt journal.
-- Keeps Wi-Fi available for paired controls with modem power saving. Sleeping/offline consoles are not reachable.
+- Reports the installed theme ID and version to the paired Sweetcorn iPhone app, enabling its console page to match the console theme. Home remains neutral.
+- Preserves existing pairing, approvals, playtime controls, saves, games and themes. No new game or theme packs are included.
 
-## Install and pair
-Keep the console charging and connected to Wi-Fi. Open **Settings → Update firmware**. After restart, check **About → 2026.11.2** and leave it running for a minute. This normal OTA update preserves settings, saves and installed packs.
+## Install
+Keep the console charging and connected to Wi-Fi. Choose **Settings → Update firmware**. After restart, check **About → 2026.11.3**, leave the console awake for a minute, then reopen Sweetcorn on the phone. The matching console page updates after its next successful sync. Normal OTA preserves data; do not use the full-erase USB installer for this update.
 
-Unlock the parental PIN, open **Settings → Pair phone**, and explicitly start pairing. In the configured Sweetcorn app, scan the QR or enter its code. Then confirm on the console while its pairing page remains unlocked. Leaving cancels an unconfirmed pair.
+## Verification and known limitations
+ESP32-S3 build, 64 companion host checks, 26 server checks, 13 simulator checks and 14 iOS Core checks passed. The redesigned iPhone app is installed and the compatible server schema is active. **Physical-console verification of this firmware and end-to-end theme matching is pending.** Browser USB flashing is also unverified. Sleeping/offline consoles cannot sync; the app stays neutral until it receives a reported theme. Existing experimental private-service companion limitations remain: no public App Store distribution or push notifications.
 
-## Verification and limitations
-Successful ESP32-S3 build; 62 companion fault-injection checks, 19,226 real-LVGL host checks and four rollback checks passed. The private HTTPS service and iOS simulator have passed their software checks. **Real-console pairing, power-loss recovery, running-game behaviour, RAM margin and battery use remain unverified.** Physical browser USB flashing is also unverified.
-
-This is an experimental private-instance integration, not a generally available iPhone product. The current build targets the maintainer's configured service; the app needs its provisioned owner access. Consumer accounts, App Store distribution and push notifications are unfinished. Remote firmware updates, theme changes and game deletion are not enabled. Disconnect on the console clears local credentials; revoke its old app entry to remove the server association.
-
-Existing game/theme packs are unchanged; new game-owned artwork packs remain held back. Public version 2026.11.2 uses compatible numeric image/catalogue version 20261102. Attached binary is app-only, not a factory flash image. Use the normal console updater; the separate browser installer is full-erase recovery.
+New game-owned artwork packs remain held back. Version 2026.11.3 uses compatible numeric image/catalogue version 20261103. The attached binary is app-only; the separate USB installer is full-erase recovery.
