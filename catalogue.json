@@ -95,11 +95,11 @@
       "id": "tilt",
       "title": "Tilt",
       "kind": "rules",
-      "version": 1,
+      "version": 2,
       "engine_min": 4,
-      "size": 11232,
-      "sha256": "ab0a67894237cb3ea1b6fb60276e1c2eef85bb64c22099019071c255022822e3",
-      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/tilt-1.gpk"
+      "size": 12916,
+      "sha256": "2b2a41665d6cd8db0826f1c16f2edea68eef9d7c76c9dc81d1a9f4a3d87a46b6",
+      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/tilt-2.gpk"
     },
     {
       "id": "theme-dinosaurs",
@@ -165,71 +165,71 @@
       "id": "acorn-fw",
       "title": "Firmware",
       "kind": "firmware",
-      "version": 20261113,
+      "version": 20261114,
       "engine_min": 2,
-      "size": 2055504,
-      "sha256": "08f83833c0210fb836e0e1a2b8eeb130f9af14047e2b642565c95983b530769c",
-      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/firmware/sweetcorn-fw-2026.11.13.bin"
+      "size": 2059040,
+      "sha256": "122ee0eb0e275ad120a2c92c3c312cbd7a74a90c79e0f3be2a8591c1ac6d5c34",
+      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/firmware/sweetcorn-fw-2026.11.14.bin"
     },
     {
       "id": "tracing",
       "title": "Letter Tracing",
       "kind": "rules",
-      "version": 1,
-      "engine_min": 6,
-      "size": 458912,
-      "sha256": "6769b8d562ac3a4253a7189223d0bfbfdbd7bf3ef2fd225e11acd45dc42719e0",
-      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/tracing-1.gpk"
+      "version": 2,
+      "engine_min": 7,
+      "size": 570984,
+      "sha256": "f6f56f60892bacdae39907e8620c47e45569ee3ff415566ca93d23b020a2ab64",
+      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/tracing-2.gpk"
     },
     {
       "id": "numbers",
       "title": "Numbers",
       "kind": "rules",
-      "version": 2,
+      "version": 3,
       "engine_min": 6,
-      "size": 575680,
-      "sha256": "7c2505790a33bd05b8755b66d9e37fa1d62d11c6f520c9f7a4b9f778f2a262b4",
-      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/numbers-2.gpk"
+      "size": 577268,
+      "sha256": "d9f6baee51f429ccfd7b1f174a05026b52ab2ce002debbf2620f717807bbd604",
+      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/numbers-3.gpk"
     },
     {
       "id": "tictac",
       "title": "Tic-tac-toe",
       "kind": "rules",
-      "version": 2,
+      "version": 3,
       "engine_min": 6,
-      "size": 867492,
-      "sha256": "6a10d668fabce31e93719709685a70709c49f7f785a73bc8b898933007252189",
-      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/tictac-2.gpk"
+      "size": 867900,
+      "sha256": "a7e3f0e1432dcac287c9bd8096b516382cec02aeab4a04de33dcbfe808dd03ba",
+      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/tictac-3.gpk"
     },
     {
       "id": "boxes",
       "title": "Dots and Boxes",
       "kind": "rules",
-      "version": 2,
+      "version": 3,
       "engine_min": 6,
-      "size": 1059684,
-      "sha256": "8d73b2c2ecc20506b7e3185b07775b7fdc616e3511513dffba68d15fa3ba3805",
-      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/boxes-2.gpk"
+      "size": 1037052,
+      "sha256": "47102c40c28f05008038745f9a0d085c8d3188ff4a3a8e060b8e4c2c5e976a42",
+      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/boxes-3.gpk"
     },
     {
       "id": "blockbas",
       "title": "Block Basher",
       "kind": "rules",
-      "version": 2,
+      "version": 3,
       "engine_min": 6,
-      "size": 699964,
-      "sha256": "5658629bafa3ea6eb20eae8ef9ddf09d3c26f955b68b8295d7a97f3673570816",
-      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/blockbas-2.gpk"
+      "size": 749868,
+      "sha256": "0ed6e4863c4ba60b15b98325d4bb13be07fcbb3e0024892d02d628910dcb6ce5",
+      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/blockbas-3.gpk"
     },
     {
       "id": "drawing",
       "title": "Drawing",
       "kind": "rules",
-      "version": 2,
-      "engine_min": 6,
-      "size": 721440,
-      "sha256": "daddf38e3363d5e36de2661a37eb6e971598ca6e96c70a21dcfb3c7893d474f9",
-      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/drawing-2.gpk"
+      "version": 3,
+      "engine_min": 7,
+      "size": 719740,
+      "sha256": "d00458ebd0a223badac1ad687d628d0a393592d8f7140394bfd10999d21b170e",
+      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/packs/drawing-3.gpk"
     }
   ]
 }

@@ -13,25 +13,19 @@ Sweetcorn Arcade is a DIY handheld games project built around an ESP32-S3 and a 
 
 Installed games run on the console. Wi-Fi brings new games, themes and signed firmware updates.
 
-> **Development project, not a finished product.** Latest firmware: **2026.11.13**. Automated checks passed; real-console verification of the fixes is still pending.
+> **Development project, not a finished product.** Latest firmware: **2026.11.14**. Automated checks passed; real-console verification of the fixes is still pending.
 
-## Latest update — 2026.11.13
+## Latest update — 2026.11.14
 
-# Sweetcorn Arcade 2026.11.13 — daily allowance usage
+- Block Basher: clear Touch/Tilt selection before launch and between lives.
+- Tic-tac-toe and Boxes: Easy, Medium, Hard and two-player modes.
+- Boxes: Again/Mode separated from the board to reduce accidental taps.
+- Numbers: visual comparison examples and nonverbal feedback.
+- Drawing: persistent smooth antialiased strokes instead of a coarse grid.
+- Letter Tracing: rounded Nunito letter models, blank freehand copy space, matching pencil icon. No handwriting grading.
+- Tilt: 24 levels, replay-safe graphics and separate best-time record.
 
-Reports the console’s local date and used daily-allowance minutes to the companion app, including its active game. The Playtime page can show used minutes out of the applied allowance, a progress bar and remaining allowance. Readings are labelled with their date and last-sync status; extra playtime stays separate.
-
-The updated companion mailbox and iPhone app are required and have been deployed. Unknown clock or unreadable play history reports unavailable usage, never a made-up zero. Older firmware remains compatible with the app and mailbox.
-
-Allowance enforcement is unchanged. Telemetry shares the enforcement counter; completed sessions retain their start-day attribution and existing rounding, and active sessions retain existing cross-midnight accounting. This is an allowance counter, not a new wall-clock timekeeping policy. No pairing, saves, settings or persisted-data layouts change.
-
-Includes 2026.11.12’s automatic signed-catalogue refresh and game-install recovery. All current games, theme packs and artwork are retained unchanged.
-
-Verification: 661 companion checks, 13,630 UI checks, 4 rollback checks and 404 core/pack/crypto checks passed. ESP32-S3 production build, image version/size, Ed25519 signature and matching factory layout verified. Physical-console telemetry is not verified until installation and a subsequent sync.
-
-Use the normal signed firmware update to preserve console data. The factory image is for first installation/recovery, not updating an existing console.
-
-Published release; physical-console verification follows installation.
+Includes firmware13 daily playtime reporting. Update firmware first, then update these games. Drawing and Letter Tracing require firmware14 (engine7); older firmware cannot run those new packs. Pairing, settings and saves are retained; use normal signed update, not factory installation. Physical-console performance and usability remain to be verified after installation.
 
 ## Six new games — 4 November 2026
 
@@ -85,7 +79,7 @@ Five different looks for the same collection of games. Change your theme through
 
 1. Keep it charging and connected to Wi-Fi.
 2. Open **Settings → Update firmware**.
-3. After restarting, check that About shows **2026.11.13**, and leave it running for a full minute to confirm the update.
+3. After restarting, check that About shows **2026.11.14**, and leave it running for a full minute to confirm the update.
 4. Download a current theme through **Settings → Themes**.
 5. Choose games through **More games**, then approve them under **Settings → Downloads**.
 
