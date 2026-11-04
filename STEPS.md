@@ -1,10 +1,9 @@
-# Sweetcorn Arcade 2026.11.9
+# Sweetcorn Arcade 2026.11.10
 
-- Fixed theme artwork disappearing with larger installed-game libraries. The menu now keeps only nearby game tiles in memory, and preserves existing artwork if a reload fails.
-- Game-install progress stays visible through the whole queued batch.
-- Firmware-update progress remains visible through reboot and boot verification.
-- Returning to the main menu restores the last selected tile, including when newly installed games change the order.
+- Fixes console restarts when launching graphics-heavy games such as Numbers. Game graphics now use external memory, preserving internal memory required by Wi-Fi.
+- Retains the 2026.11.9 theme-artwork fix, persistent installing/update screens and remembered main-menu position.
+- Normal OTA preserves installed games, themes, saves and pairing.
 
-Verified with the actual 14-game library across all five themes, production pack-manager regressions, 13,582 UI checks and four rollback checks. ESP32 build and release signatures verified. Physical-console verification follows installation.
+The original failure was captured on a physical console. The repair passed 1,099 allocator checks, 695 game-host checks, 13,582 UI checks and four rollback checks, plus the ESP32 target build and signature checks. Physical verification of the repaired firmware remains pending.
 
-Existing games, themes, pairing and saves are preserved by the normal OTA update. Use the console's normal firmware update flow; the web installer is for USB factory installation.
+Use the normal console/app firmware update flow. The USB factory installer is for fresh installation/recovery, not the normal update path.
