@@ -13,13 +13,18 @@ Sweetcorn Arcade is a DIY handheld games project built around an ESP32-S3 and a 
 
 Installed games run on the console. Wi-Fi brings new games, themes and signed firmware updates.
 
-> **Development project, not a finished product.** Latest firmware: **2026.11.8**. Automated checks passed; real-console verification of the fixes is still pending.
+> **Development project, not a finished product.** Latest firmware: **2026.11.9**. Automated checks passed; real-console verification of the fixes is still pending.
 
-## Latest update — 2026.11.8
+## Latest update — 2026.11.9
 
-Approved game downloads now reload the signed catalogue automatically after reboot or an update. Phone sync no longer hides the download refusal behind a generic busy message. Catalogue failures back off and retry without another approval. Pairing, saves and existing approvals are preserved.
+- Fixed theme artwork disappearing with larger installed-game libraries. The menu now keeps only nearby game tiles in memory, and preserves existing artwork if a reload fails.
+- Game-install progress stays visible through the whole queued batch.
+- Firmware-update progress remains visible through reboot and boot verification.
+- Returning to the main menu restores the last selected tile, including when newly installed games change the order.
 
-Host regression tests cover empty-catalogue recovery and shared-worker contention. Hardware installation remains separately verified.
+Verified with the actual 14-game library across all five themes, production pack-manager regressions, 13,582 UI checks and four rollback checks. ESP32 build and release signatures verified. Physical-console verification follows installation.
+
+Existing games, themes, pairing and saves are preserved by the normal OTA update. Use the console's normal firmware update flow; the web installer is for USB factory installation.
 
 ## Six new games — 4 November 2026
 
@@ -73,7 +78,7 @@ Five different looks for the same collection of games. Change your theme through
 
 1. Keep it charging and connected to Wi-Fi.
 2. Open **Settings → Update firmware**.
-3. After restarting, check that About shows **2026.11.8**, and leave it running for a full minute to confirm the update.
+3. After restarting, check that About shows **2026.11.9**, and leave it running for a full minute to confirm the update.
 4. Download a current theme through **Settings → Themes**.
 5. Choose games through **More games**, then approve them under **Settings → Downloads**.
 
@@ -91,7 +96,7 @@ This repository is currently a distribution library for an already provisioned c
 
 | Published now | Still being worked on |
 |---|---|
-| Firmware 2026.11.8 signed update | Real-console verification of rapid taps, scrolling and downloads |
+| Firmware 2026.11.9 signed update | Real-console verification of rapid taps, scrolling and downloads |
 | Sixteen game packs and five compressed themes | Real-console verification of the six new game-owned artwork packs |
 | Retained-save deletion after uninstalling a game | Physical pairing tests, app distribution and automated game submission checks |
 | PIN-protected game removal, with saves kept by default | Full source packaging and security/licence audit |
@@ -120,4 +125,4 @@ There is **no blanket MIT licence grant** for this repository. MIT for original 
 
 ## USB installation on Mac and Windows
 
-Open the [Sweetcorn USB installer](https://will-fezz.github.io/acorn-arcade/) in desktop Chrome or Edge. For the Waveshare ESP32-S3-Touch-AMOLED-1.75C (32 MB) only. **Fresh install/recovery erases settings, saves and installed games/themes.** Use Settings → Update firmware on an existing console to keep data. The installer uses released firmware 2026.11.8, including experimental private-instance companion support. Physical browser USB flashing remains unverified.
+Open the [Sweetcorn USB installer](https://will-fezz.github.io/acorn-arcade/) in desktop Chrome or Edge. For the Waveshare ESP32-S3-Touch-AMOLED-1.75C (32 MB) only. **Fresh install/recovery erases settings, saves and installed games/themes.** Use Settings → Update firmware on an existing console to keep data. The installer uses released firmware 2026.11.9, including experimental private-instance companion support. Physical browser USB flashing remains unverified.
