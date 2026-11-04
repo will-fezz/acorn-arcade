@@ -31,7 +31,7 @@ contains background, ball, centrepiece, two 44 px mode buttons and `_tile.png` f
 outdoors, space, dinosaurs, unicorns and manga, built from the shipped theme sets
 by `tools/newgames/review_prototypes.py build`: the background is the theme's
 `bg_soil` page (Snake's stone/asteroid/lava/cloud ring, black outside the glass),
-the ball and centrepiece are the design pass's `bb_ball` (acorn, star, egg, pink
+the ball and centrepiece are the design pass's `bb_ball` (nut, star, egg, pink
 ball, temari) and `bb_centre` (sun, planet, volcano, rainbow cloud, lantern), the
 rings are the theme's `tilt_wall` colour, accent2 gold and ok green, the paddle
 beads the wall colour, and the mode button a palette disc with the theme's

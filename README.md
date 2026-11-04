@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/sweetcorn-mascot.png" width="300" alt="Sweetcorn Arcade — a cheerful cartoon sweetcorn holding a round games console">
+  <img src="assets/sweetcorn-logo.png" width="300" alt="Sweetcorn Arcade — official sweetcorn logo from the iPhone app icon">
 </p>
 
 <h1 align="center">Sweetcorn Arcade</h1>
@@ -112,7 +112,7 @@ Keep contributions free of advertising, tracking, purchases and chat. Installed 
 
 ## Name, artwork and licences
 
-**Sweetcorn Arcade** is the new project name, replacing Acorn Arcade. The repository address and internal identifiers still use `acorn-arcade` / `acorn` to preserve existing update URLs and compatibility. Older firmware may still show the previous branding.
+**Sweetcorn Arcade** is the project and repository name. Existing consoles retain compatible update downloads and their stored games, settings and saves.
 
 The mascot was newly AI-generated for this rebrand. Names are not represented as trademark-cleared, and a new name does not settle rights in third-party game names or assets.
 
@@ -124,4 +124,8 @@ There is **no blanket MIT licence grant** for this repository. MIT for original 
 
 ## USB installation on Mac and Windows
 
-Open the [Sweetcorn USB installer](https://will-fezz.github.io/acorn-arcade/) in desktop Chrome or Edge. For the Waveshare ESP32-S3-Touch-AMOLED-1.75C (32 MB) only. **Fresh install/recovery erases settings, saves and installed games/themes.** Use Settings → Update firmware on an existing console to keep data. The installer uses released firmware 2026.11.11, including experimental private-instance companion support. Physical browser USB flashing remains unverified.
+Open the [Sweetcorn USB installer](https://will-fezz.github.io/sweetcorn-arcade/) in desktop Chrome or Edge. For the Waveshare ESP32-S3-Touch-AMOLED-1.75C (32 MB) only. **Fresh install/recovery erases settings, saves and installed games/themes.** Use Settings → Update firmware on an existing console to keep data. The installer uses released firmware 2026.11.11, including experimental private-instance companion support. Physical browser USB flashing remains unverified.
+
+## Sweetcorn identity and roadmap
+
+The sweetcorn artwork in the current iPhone app icon is the official Sweetcorn logo. A matching console theme is [planned on the roadmap](ROADMAP.md#themes); it is not available to install yet.
