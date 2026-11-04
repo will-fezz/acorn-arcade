@@ -60,7 +60,7 @@ Letter Tracing, Numbers, Tic-tac-toe, Dots and Boxes, Block Basher and Drawing a
 - Block Basher has three central block rings and a 360-degree paddle.
 - Drawing has a round canvas with rim-mounted colours and tools. It remains pixel-based and does not save drawings.
 
-Requires engine 6 (firmware 7 or later; current public firmware 2026.11.6 is compatible). On the console open **More games**, request each game, then approve the requests in the parent app. Keep it awake and on Wi-Fi during download. The six games allocate 18 slots (4.5 MiB), without removing existing games or saves.
+Requires engine 6 (firmware 7 or later; current public firmware 2026.11.6 is compatible). On the console open **More games → Look for games**, tap **ask** for each new game, then approve the requests in the parent app. Keep it awake and on Wi-Fi during download. The six games allocate 18 slots (4.5 MiB), without removing existing games or saves.
 
 All six logic suites and all 30 game/theme combinations in the real Lua/LVGL host passed before publication. Host tests are not physical-console testing; the first hardware installation/play-through remains to be verified.
 
@@ -78,8 +78,14 @@ All six logic suites and all 30 game/theme combinations in the real Lua/LVGL hos
 | **Pop-Up Tap** | Catch the pop-ups with a tap. |
 | **Switch Off** | Work through a lights puzzle. |
 | **Hungry Monster** | Feed a hungry character. |
+| **Letter Tracing** | Trace upper- and lower-case letters. |
+| **Numbers** | Count and practise numbers. |
+| **Tic-tac-toe** | Make a line of three. |
+| **Dots and Boxes (Squares)** | Choose a 2×2, 3×3 or 4×4 board. |
+| **Block Basher** | Rotate a paddle around three rings of blocks. |
+| **Drawing** | Draw on a round canvas with edge controls. |
 
-All ten appear in the [published catalogue](catalogue.json). Host testing covers the games across five themes; complete real-device verification is still in progress.
+All sixteen appear in the [published catalogue](catalogue.json). Host testing covers the games across five themes; complete real-device verification is still in progress.
 
 ## Choose your world
 
@@ -87,9 +93,9 @@ All ten appear in the [published catalogue](catalogue.json). Host testing covers
 
 Five different looks for the same collection of games. Change your theme through **Settings → Themes**.
 
-**How artwork works today:** the published theme packs contain game artwork, including pictures for games you have not installed. Removing a game does not currently remove its pictures from a shared theme.
+**Legacy artwork:** the published theme packs contain game artwork, including pictures for games you have not installed. Removing a game does not currently remove its pictures from a shared theme.
 
-**The next design:** each game pack will carry that game's pictures for all five themes. Theme packs will keep shared interface artwork. Removing a game will then remove its bundled pictures too. Firmware support is included, but the new game-owned packs are **held back** pending real-console confirmation; existing packs remain unchanged.
+**Game-owned artwork:** the six new packs each carry their own pictures for all five themes. Removing one also removes its bundled pictures. Existing games and shared theme packs remain unchanged. The new packs have passed host tests; real-console installation and playtesting remain unverified.
 
 ## Get playing
 
@@ -116,11 +122,11 @@ This repository is currently a distribution library for an already provisioned c
 | Published now | Still being worked on |
 |---|---|
 | Firmware 2026.11.6 signed update | Real-console verification of rapid taps, scrolling and downloads |
-| Ten game packs and five compressed themes | Release of game-owned artwork packs after console confirmation |
+| Sixteen game packs and five compressed themes | Real-console verification of the six new game-owned artwork packs |
 | Retained-save deletion after uninstalling a game | Physical pairing tests, app distribution and automated game submission checks |
 | PIN-protected game removal, with saves kept by default | Full source packaging and security/licence audit |
 
-Host checks do not replace testing on the actual console. New artwork packs remain held back; this release does not replace existing games or themes.
+Host checks do not replace testing on the actual console. The six new artwork packs are published; this release does not replace existing games or themes.
 
 ## For makers
 
