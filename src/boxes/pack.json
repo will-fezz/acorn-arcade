@@ -1,0 +1,43 @@
+{
+  "id": "boxes",
+  "title": "Dots and Boxes",
+  "rules_version": 1,
+  "rules_engine": 6,
+  "engine_min": 6,
+  "script": "main.lua",
+  "bundle_kind": 3,
+  "status": "unpublished-candidate",
+  "images": {
+    "background": {
+      "file": "background.png",
+      "alpha": false
+    },
+    "menu": "menu.png",
+    "footer": "footer.png",
+    "choose": "choose.png",
+    "turn1": "turn1.png",
+    "turn2": "turn2.png",
+    "extra1": "extra1.png",
+    "extra2": "extra2.png",
+    "thinking": "thinking.png",
+    "win1": "win1.png",
+    "win2": "win2.png",
+    "winai": "winai.png",
+    "draw": "draw.png",
+    "h0": "h0.png",
+    "v0": "v0.png",
+    "h1": "h1.png",
+    "v1": "v1.png",
+    "claim1": "claim1.png",
+    "h2": "h2.png",
+    "v2": "v2.png",
+    "claim2": "claim2.png",
+    "size2": "size2.png",
+    "size3": "size3.png",
+    "size4": "size4.png",
+    "size_on": "size_on.png",
+    "dot": "dot.png"
+  },
+  "theme_art": "art/{theme}",
+  "tile": "_tile.png"
+}

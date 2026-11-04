@@ -1,0 +1,22 @@
+{
+  "id": "drawing",
+  "title": "Drawing",
+  "rules_version": 1,
+  "rules_engine": 6,
+  "script": "main.lua",
+  "images": {
+    "background": {
+      "file": "background.png",
+      "alpha": false
+    },
+    "pixel": "pixel.png",
+    "tool_thin": "tool_thin.png",
+    "tool_mid": "tool_mid.png",
+    "tool_wide": "tool_wide.png",
+    "tool_erase": "tool_erase.png",
+    "tool_clear": "tool_clear.png",
+    "confirm": "confirm.png"
+  },
+  "candidate_only": true,
+  "integration_note": "Unsigned prototype: game-owned five-theme artwork under art/<theme>; round full-glass paper of 16 px cells; no persistence."
+}

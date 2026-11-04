@@ -4,7 +4,7 @@
 
 <h1 align="center">Sweetcorn Arcade</h1>
 <p align="center"><strong>A little console. A whole lot of play.</strong></p>
-<p align="center">10 games · 5 illustrated themes · 1 tiny round touchscreen</p>
+<p align="center">16 games · 5 illustrated themes · 1 tiny round touchscreen</p>
 <p align="center"><a href="#pick-your-game">Games</a> · <a href="#choose-your-world">Themes</a> · <a href="#get-playing">Get started</a> · <a href="#on-the-workbench">Development</a></p>
 
 ---
@@ -50,6 +50,19 @@ installation on your console.
 
 The matching USB factory installer is for fresh installation only: **FULL ERASE**
 can remove Wi-Fi settings, pairing, games, passcode and saved progress.
+
+## Six new games — 4 November 2026
+
+Letter Tracing, Numbers, Tic-tac-toe, Dots and Boxes, Block Basher and Drawing are now available as individually signed game packs. All five themes are included in each pack. Existing games, themes and firmware are unchanged.
+
+- Letter Tracing uses the Numbers pond background, without a character overlapping the letters.
+- Dots and Boxes has 2×2, 3×3 and 4×4 grids.
+- Block Basher has three central block rings and a 360-degree paddle.
+- Drawing has a round canvas with rim-mounted colours and tools. It remains pixel-based and does not save drawings.
+
+Requires engine 6 (firmware 7 or later; current public firmware 2026.11.6 is compatible). On the console open **More games**, request each game, then approve the requests in the parent app. Keep it awake and on Wi-Fi during download. The six games allocate 18 slots (4.5 MiB), without removing existing games or saves.
+
+All six logic suites and all 30 game/theme combinations in the real Lua/LVGL host passed before publication. Host tests are not physical-console testing; the first hardware installation/play-through remains to be verified.
 
 ## Pick your game
 

@@ -1,0 +1,15 @@
+{
+  "id": "tracing",
+  "title": "Letter Tracing",
+  "rules_version": 1,
+  "rules_engine": 6,
+  "script": "main.lua",
+  "images": {
+    "paper": {
+      "file": "paper.png",
+      "alpha": false
+    },
+    "mascot": "mascot.png"
+  },
+  "candidate_only": true
+}

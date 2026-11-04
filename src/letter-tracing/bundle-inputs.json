@@ -1,0 +1,157 @@
+{
+  "status": "unsigned candidate inputs only, not an installable pack",
+  "id": "tracing",
+  "title": "Letter Tracing",
+  "format": 2,
+  "kind": 3,
+  "version": 1,
+  "engine_min": 6,
+  "deflate": true,
+  "entries": [
+    {
+      "name": "main",
+      "type": "lua",
+      "source": "main.lua"
+    },
+    {
+      "name": "art_needed",
+      "type": "manifest",
+      "text": "paper\nmascot\n"
+    },
+    {
+      "name": "outdoors/paper",
+      "source": "art/outdoors/paper.png",
+      "width": 466,
+      "height": 466,
+      "alpha": false,
+      "decoded_bytes": 434312,
+      "sha256": "781ae8ad29421cef070cec328a09c4a84ccc3a4768e1b6384dddf7c3675f865d"
+    },
+    {
+      "name": "outdoors/mascot",
+      "source": "art/outdoors/mascot.png",
+      "width": 90,
+      "height": 90,
+      "alpha": true,
+      "decoded_bytes": 24300,
+      "sha256": "81ae5c72dc34c2301714f994db86ef0951331c9f7570f4ce28a7f6273fe89b88"
+    },
+    {
+      "name": "outdoors/_tile",
+      "source": "art/outdoors/tile.png",
+      "width": 240,
+      "height": 240,
+      "alpha": true,
+      "decoded_bytes": 172800,
+      "sha256": "e389d5a65282439d3b611067477797bf4176465bb7e9635f6aeb88798d376b4f"
+    },
+    {
+      "name": "space/paper",
+      "source": "art/space/paper.png",
+      "width": 466,
+      "height": 466,
+      "alpha": false,
+      "decoded_bytes": 434312,
+      "sha256": "c53f068f989c419e955725881b319516d3c5002f2ea5265c8a04518b18519249"
+    },
+    {
+      "name": "space/mascot",
+      "source": "art/space/mascot.png",
+      "width": 90,
+      "height": 90,
+      "alpha": true,
+      "decoded_bytes": 24300,
+      "sha256": "74942fed0175f7aaceddc05de0ee02e365ff842f0c58f950a4cf49e46f3032ce"
+    },
+    {
+      "name": "space/_tile",
+      "source": "art/space/tile.png",
+      "width": 240,
+      "height": 240,
+      "alpha": true,
+      "decoded_bytes": 172800,
+      "sha256": "c2a923ddd4635dcdf9822b8a790526f85ba19f6499c1721e4c7b03242a55f160"
+    },
+    {
+      "name": "dinosaurs/paper",
+      "source": "art/dinosaurs/paper.png",
+      "width": 466,
+      "height": 466,
+      "alpha": false,
+      "decoded_bytes": 434312,
+      "sha256": "ce795013a9ef58f773e06e604dc30d7e2f279784b281c50bc0291c818ecc7d47"
+    },
+    {
+      "name": "dinosaurs/mascot",
+      "source": "art/dinosaurs/mascot.png",
+      "width": 90,
+      "height": 90,
+      "alpha": true,
+      "decoded_bytes": 24300,
+      "sha256": "02fd7cd28392edc2b6481644415a033e5dd7f05eabe5929276ce9d785d3e1842"
+    },
+    {
+      "name": "dinosaurs/_tile",
+      "source": "art/dinosaurs/tile.png",
+      "width": 240,
+      "height": 240,
+      "alpha": true,
+      "decoded_bytes": 172800,
+      "sha256": "558f6ac77b83e7ae55c233c2089cc27b3bae8565dbb398cfcddd3a8f999f869a"
+    },
+    {
+      "name": "unicorns/paper",
+      "source": "art/unicorns/paper.png",
+      "width": 466,
+      "height": 466,
+      "alpha": false,
+      "decoded_bytes": 434312,
+      "sha256": "9fa1aafb6f188ab546762039d729cf6b1f4fc71d7ee02b65feccd6f735f9485e"
+    },
+    {
+      "name": "unicorns/mascot",
+      "source": "art/unicorns/mascot.png",
+      "width": 90,
+      "height": 90,
+      "alpha": true,
+      "decoded_bytes": 24300,
+      "sha256": "010699b141f85dcac301bdb34873b31f7887cde27793fcf8b39c217be91deb1a"
+    },
+    {
+      "name": "unicorns/_tile",
+      "source": "art/unicorns/tile.png",
+      "width": 240,
+      "height": 240,
+      "alpha": true,
+      "decoded_bytes": 172800,
+      "sha256": "baedb980626b29bced0f371c12de6a0c7104c1d530c731610b2b309053b278f2"
+    },
+    {
+      "name": "manga/paper",
+      "source": "art/manga/paper.png",
+      "width": 466,
+      "height": 466,
+      "alpha": false,
+      "decoded_bytes": 434312,
+      "sha256": "213c01e7474a71f6762edfb50215dc2cf34b4cec752e58959d51f30e7b14b51c"
+    },
+    {
+      "name": "manga/mascot",
+      "source": "art/manga/mascot.png",
+      "width": 90,
+      "height": 90,
+      "alpha": true,
+      "decoded_bytes": 24300,
+      "sha256": "faa77ff6ea8373411a23cf4b16dda31672ea9da7fa38c647ac566ca63db3ca64"
+    },
+    {
+      "name": "manga/_tile",
+      "source": "art/manga/tile.png",
+      "width": 240,
+      "height": 240,
+      "alpha": true,
+      "decoded_bytes": 172800,
+      "sha256": "0ce3ec1c32beab12580c1890241c6a0afb45ca290123b543cefd87ebf20eb060"
+    }
+  ]
+}

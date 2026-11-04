@@ -1,0 +1,27 @@
+{
+  "id": "tictac",
+  "title": "Tic-tac-toe",
+  "rules_version": 1,
+  "rules_engine": 6,
+  "engine_min": 6,
+  "script": "main.lua",
+  "bundle_kind": 3,
+  "status": "unpublished-candidate",
+  "images": {
+    "background": {"file": "background.png", "alpha": false},
+    "board": "board.png",
+    "menu": "menu.png",
+    "footer": "footer.png",
+    "choose": "choose.png",
+    "turn_x": "turn_x.png",
+    "turn_o": "turn_o.png",
+    "thinking": "thinking.png",
+    "win_x": "win_x.png",
+    "win_o": "win_o.png",
+    "draw": "draw.png",
+    "cross": "cross.png",
+    "ring": "ring.png"
+  },
+  "theme_art": "art/{theme}",
+  "tile": "_tile.png"
+}
