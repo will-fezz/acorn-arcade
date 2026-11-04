@@ -13,17 +13,25 @@ Sweetcorn Arcade is a DIY handheld games project built around an ESP32-S3 and a 
 
 Installed games run on the console. Wi-Fi brings new games, themes and signed firmware updates.
 
-> **Development project, not a finished product.** Latest firmware: **2026.11.11**. Automated checks passed; real-console verification of the fixes is still pending.
+> **Development project, not a finished product.** Latest firmware: **2026.11.12**. Automated checks passed; real-console verification of the fixes is still pending.
 
-## Latest update — 2026.11.11
+## Latest update — 2026.11.12
 
-- Fix game/theme download memory refusals by temporarily lending the spare display buffer, then restoring it safely after downloads. Existing memory safety limits and signed-package checks stay intact.
-- Add owning-phone Games Store installation support: choose a published game in the updated private iPhone companion app without first requesting it on the console. Downloads still go directly to the console.
-- Preserve the automatic theme-list and Numbers graphics-memory fixes from 2026.11.10 revision 2.
+# Sweetcorn Arcade 2026.11.12 — automatic game catalogue recovery
 
-Install using the normal firmware update in the app or console, then let the startup check finish. This is the save-preserving path. The browser USB factory installer performs a FULL ERASE and is only for first installation/recovery.
+When the phone requests a new game or a newer game version than the console's cached signed catalogue, the console automatically refreshes that catalogue while awake and idle, then resumes the exact same request. You no longer need to open More games → Look for games to recover this case.
 
-Verification: firmware build, 612 companion checks, download-memory regressions, UI/rollback checks, 37 server tests and 30 Swift Core tests passed. Signed iPhone and simulator builds passed. Physical theme download and new Store installation remain unverified until the updated firmware runs on hardware. Companion support uses the maintainer’s private service and provisioned app; this is not an App Store release.
+The request remains pending during catalogue checks. It is not falsely marked failed or installed, and no game approval is created from unsigned phone data. All signed-catalogue, compatible-engine, exact-version, storage and download safeguards remain in force.
+
+Temporary network failures use the existing 30-second backoff. Valid but old CDN responses get a bounded retry window (12 successful refreshes, spaced by that backoff), covering GitHub's usual five-minute cache. A version still unavailable afterwards is rejected clearly rather than retried forever. Requests retain their original expiry.
+
+Crash-interrupted commands can wait safely for the catalogue after reboot without locking themselves into a storage-fault state. Command identity, replay protection and durable-intent handling remain in place. No pairing, save, settings or persisted-data layout changes.
+
+Normal signed OTA preserves data. The factory image is first-install/recovery material, not the update route for an existing console.
+
+Verification: 656 companion checks; 13,617 shell/UI checks and 4 rollback checks. Production ESP32-S3 build, image version/size, release-key signature and factory layout checked before staging. Physical-console behaviour is not verified until this new firmware is installed.
+
+No game, artwork, app or server changes are included. Published release; physical-console verification follows installation.
 
 ## Six new games — 4 November 2026
 
@@ -77,7 +85,7 @@ Five different looks for the same collection of games. Change your theme through
 
 1. Keep it charging and connected to Wi-Fi.
 2. Open **Settings → Update firmware**.
-3. After restarting, check that About shows **2026.11.11**, and leave it running for a full minute to confirm the update.
+3. After restarting, check that About shows **2026.11.12**, and leave it running for a full minute to confirm the update.
 4. Download a current theme through **Settings → Themes**.
 5. Choose games through **More games**, then approve them under **Settings → Downloads**.
 
