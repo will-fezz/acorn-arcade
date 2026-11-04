@@ -165,11 +165,11 @@
       "id": "acorn-fw",
       "title": "Firmware",
       "kind": "firmware",
-      "version": 20261114,
+      "version": 20261115,
       "engine_min": 2,
-      "size": 2059040,
-      "sha256": "122ee0eb0e275ad120a2c92c3c312cbd7a74a90c79e0f3be2a8591c1ac6d5c34",
-      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/firmware/sweetcorn-fw-2026.11.14.bin"
+      "size": 2060864,
+      "sha256": "9fcd683a6022e11b5029dd2cf0a04a7f58f1faa7f0a6ac37080bcb7f09a4cf64",
+      "url": "https://raw.githubusercontent.com/will-fezz/sweetcorn-arcade/main/firmware/sweetcorn-fw-2026.11.15.bin"
     },
     {
       "id": "tracing",

@@ -13,19 +13,21 @@ Sweetcorn Arcade is a DIY handheld games project built around an ESP32-S3 and a 
 
 Installed games run on the console. Wi-Fi brings new games, themes and signed firmware updates.
 
-> **Development project, not a finished product.** Latest firmware: **2026.11.14**. Automated checks passed; real-console verification of the fixes is still pending.
+> **Development project, not a finished product.** Latest firmware: **2026.11.15**. Automated checks passed; real-console verification of the fixes is still pending.
 
-## Latest update — 2026.11.14
+## Latest update — 2026.11.15
 
-- Block Basher: clear Touch/Tilt selection before launch and between lives.
-- Tic-tac-toe and Boxes: Easy, Medium, Hard and two-player modes.
-- Boxes: Again/Mode separated from the board to reduce accidental taps.
-- Numbers: visual comparison examples and nonverbal feedback.
-- Drawing: persistent smooth antialiased strokes instead of a coarse grid.
-- Letter Tracing: rounded Nunito letter models, blank freehand copy space, matching pencil icon. No handwriting grading.
-- Tilt: 24 levels, replay-safe graphics and separate best-time record.
+- Extra phone installs wait safely when the console's eight active request slots are full, then resume without another tap.
+- A waiting catalogue request no longer holds up ready unrelated game requests or firmware recovery commands.
+- Same-game remove/retry operations retain their ordering behind deferred installs.
+- Incompatible games return a clear instruction to update console firmware first.
+- Firmware updates can start from the idle installation-progress page.
+- Successful downloads no longer impose an artificial 30-second delay before the next game; refused starts retain retry backoff.
+- Reports the supported game-engine version for companion-app compatibility checks.
 
-Includes firmware13 daily playtime reporting. Update firmware first, then update these games. Drawing and Letter Tracing require firmware14 (engine7); older firmware cannot run those new packs. Pairing, settings and saves are retained; use normal signed update, not factory installation. Physical-console performance and usability remain to be verified after installation.
+All game packs and themes are unchanged from firmware14's release. Engine7 and firmware13/14 improvements are retained. Use the normal signed firmware update to preserve pairing, settings, installed games and saves; the browser factory installer is for initial installation.
+
+Validation: 702 companion checks, a 20-install burst/drain regression, host shell checks and ESP-IDF build passed. Companion safeguards were also software-tested separately. Physical-console installation and burst behaviour must be verified independently; test results are not hardware proof.
 
 ## Six new games — 4 November 2026
 
@@ -79,7 +81,7 @@ Five different looks for the same collection of games. Change your theme through
 
 1. Keep it charging and connected to Wi-Fi.
 2. Open **Settings → Update firmware**.
-3. After restarting, check that About shows **2026.11.14**, and leave it running for a full minute to confirm the update.
+3. After restarting, check that About shows **2026.11.15**, and leave it running for a full minute to confirm the update.
 4. Download a current theme through **Settings → Themes**.
 5. Choose games through **More games**, then approve them under **Settings → Downloads**.
 
