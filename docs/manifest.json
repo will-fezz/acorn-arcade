@@ -1,7 +1,7 @@
 {
   "name": "Sweetcorn Arcade — factory install",
-  "version": "2026.11.7",
+  "version": "2026.11.8",
   "new_install_prompt_erase": false,
   "new_install_improv_wait_time": 0,
-  "builds": [{"chipFamily": "ESP32-S3", "parts": [{"path": "firmware/sweetcorn-2026.11.7-factory.bin", "offset": 0}]}]
+  "builds": [{"chipFamily": "ESP32-S3", "parts": [{"path": "firmware/sweetcorn-2026.11.8-factory.bin", "offset": 0}]}]
 }
