@@ -1,9 +1,10 @@
 # Sweetcorn Arcade 2026.11.10
 
-- Fixes console restarts when launching graphics-heavy games such as Numbers. Game graphics now use external memory, preserving internal memory required by Wi-Fi.
-- Retains the 2026.11.9 theme-artwork fix, persistent installing/update screens and remembered main-menu position.
-- Normal OTA preserves installed games, themes, saves and pairing.
+Revision 2 replaces the original 2026.11.10 build before the test console installed it. Firmware still reports 2026.11.10; use the -r2 downloads below. A console already on the original 2026.11.10 will not automatically install a same-version revision.
 
-The original failure was captured on a physical console. The repair passed 1,099 allocator checks, 695 game-host checks, 13,582 UI checks and four rollback checks, plus the ESP32 target build and signature checks. Physical verification of the repaired firmware remains pending.
+- Restores the app's theme choices automatically after console restart, without requiring a pending game download or a manual catalogue refresh. Catalogue requests are signed and verified, run only when safe, and retry with backoff.
+- Retains the Numbers restart fix: game graphics use external memory, leaving internal memory for Wi-Fi.
+- Retains the theme-artwork fix, persistent installing/update screens and remembered main-menu position.
+- Normal OTA preserves games, themes, saves and pairing. No theme is selected or installed automatically; a previous failed theme change remains a failure until explicitly retried.
 
-Use the normal console/app firmware update flow. The USB factory installer is for fresh installation/recovery, not the normal update path.
+ESP32 build, signatures and host regressions verified before release. Physical verification of this revised build remains pending. Use the normal console/app update flow; USB factory installation is for recovery/fresh installs.

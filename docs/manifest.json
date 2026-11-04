@@ -3,5 +3,5 @@
   "version": "2026.11.10",
   "new_install_prompt_erase": false,
   "new_install_improv_wait_time": 0,
-  "builds": [{"chipFamily": "ESP32-S3", "parts": [{"path": "firmware/sweetcorn-2026.11.10-factory.bin", "offset": 0}]}]
+  "builds": [{"chipFamily": "ESP32-S3", "parts": [{"path": "firmware/sweetcorn-2026.11.10-r2-factory.bin", "offset": 0}]}]
 }
