@@ -1,10 +1,9 @@
-# Sweetcorn Arcade 2026.11.10
+# Sweetcorn Arcade 2026.11.11
 
-Revision 2 replaces the original 2026.11.10 build before the test console installed it. Firmware still reports 2026.11.10; use the -r2 downloads below. A console already on the original 2026.11.10 will not automatically install a same-version revision.
+- Fix game/theme download memory refusals by temporarily lending the spare display buffer, then restoring it safely after downloads. Existing memory safety limits and signed-package checks stay intact.
+- Add owning-phone Games Store installation support: choose a published game in the updated private iPhone companion app without first requesting it on the console. Downloads still go directly to the console.
+- Preserve the automatic theme-list and Numbers graphics-memory fixes from 2026.11.10 revision 2.
 
-- Restores the app's theme choices automatically after console restart, without requiring a pending game download or a manual catalogue refresh. Catalogue requests are signed and verified, run only when safe, and retry with backoff.
-- Retains the Numbers restart fix: game graphics use external memory, leaving internal memory for Wi-Fi.
-- Retains the theme-artwork fix, persistent installing/update screens and remembered main-menu position.
-- Normal OTA preserves games, themes, saves and pairing. No theme is selected or installed automatically; a previous failed theme change remains a failure until explicitly retried.
+Install using the normal firmware update in the app or console, then let the startup check finish. This is the save-preserving path. The browser USB factory installer performs a FULL ERASE and is only for first installation/recovery.
 
-ESP32 build, signatures and host regressions verified before release. Physical verification of this revised build remains pending. Use the normal console/app update flow; USB factory installation is for recovery/fresh installs.
+Verification: firmware build, 612 companion checks, download-memory regressions, UI/rollback checks, 37 server tests and 30 Swift Core tests passed. Signed iPhone and simulator builds passed. Physical theme download and new Store installation remain unverified until the updated firmware runs on hardware. Companion support uses the maintainer’s private service and provisioned app; this is not an App Store release.
