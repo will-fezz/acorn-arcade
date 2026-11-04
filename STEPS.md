@@ -1,35 +1,36 @@
-# Sweetcorn Arcade 2026.11.6
+# Sweetcorn Arcade 2026.11.7
 
-# Sweetcorn Arcade 2026.11.6
+# Sweetcorn Arcade 2026.11.7
 
-Fixes missing Play activity in the Sweetcorn iPhone app. The console now sends
-per-game totals from its 30 most recent completed play sessions, including
-existing recorded sessions. Minutes are rounded up after summing each game.
-This is recent recorded history, not a daily total or live gameplay timer.
-An unavailable log remains unknown rather than being reported as zero.
+Fixes the phone-command journal filling after 32 retained commands. Protocol v2
+assigns stable server serials and persists a replay barrier before reclaiming
+confirmed receipts. Existing pairing, pending intent, game packs and saves keep
+their existing storage layout. Duplicate commands stay non-executable across
+restarts and interrupted writes; this is not a larger fixed buffer.
 
-App-requested firmware updates can now start with battery strictly above 25%,
-or while connected to external power. Unknown battery requires external power.
-The console must still be awake, idle and on Wi-Fi; signature and rollback
-safeguards are unchanged.
+Approved game downloads now retry fairly and report local wait/error reasons
+(wake console, exit game, busy, Wi-Fi or memory) to the companion app instead of
+silently remaining approved. The app distinguishes approval from installation.
+The compatible private companion service must be upgraded before this firmware.
 
 ## Verification and limitations
 
-- 115 companion checks passed, including battery boundary and activity reporting.
-- Activity aggregation checks passed with address/undefined-behavior sanitizers.
-- Nonempty C++ activity snapshot passed the deployed service schema.
-- ESP-IDF ESP32-S3 release build passed; signed image and factory layout verified.
-- Catalogue checked with the shipped C parser; game/theme entries unchanged.
-- Physical-console activity reporting and this update's OTA remain unverified.
-- No new game-owned packs are published in this release.
+- 579 companion checks passed under address/undefined-behavior sanitizers,
+  including 96 unique commands, reboot/replay, failed persistence, expiry and v1 migration.
+- 36 service tests passed, including 96-command/reconnect runs, legacy response
+  compatibility, migration, gap-safe retirement and monotonically allocated IDs.
+- ESP-IDF ESP32-S3 release build passed; signed image/factory layout and shipped
+  C catalogue parser checked before publication. Game/theme packs unchanged.
+- Real-console protocol-v2 operation and Letter Tracing installation are not yet
+  hardware-verified. Publication does not prove or initiate console installation.
 
 ## Installation
 
-Use the normal firmware update from Sweetcorn or the console. For the first
-update from 2026.11.5 or older, connect external power because the installed
-firmware still requires it. Keep the console awake, idle and on Wi-Fi.
-Normal OTA preserves games and saved progress. Publication does not initiate
-installation on your console.
+For a console whose old phone journal is full, use the console's own
+**Settings → Update firmware** (enter its current passcode), not another phone
+update command. Keep it awake, idle, near Wi-Fi and on external power. Normal
+signed OTA preserves pairing, games and saves. After it reconnects, verify the
+reported firmware and installed games; do not resend an existing approval.
 
-The matching USB factory installer is for fresh installation only: **FULL ERASE**
-can remove Wi-Fi settings, pairing, games, passcode and saved progress.
+The matching USB factory image is for fresh installation only: **FULL ERASE**
+can remove pairing, Wi-Fi, games and saved progress. Do not use it for this repair.
