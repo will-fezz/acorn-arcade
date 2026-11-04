@@ -1,12 +1,12 @@
 {
   "id": "boxes",
   "title": "Dots and Boxes",
-  "rules_version": 1,
+  "rules_version": 2,
   "rules_engine": 6,
   "engine_min": 6,
   "script": "main.lua",
   "bundle_kind": 3,
-  "status": "unpublished-candidate",
+  "status": "published",
   "images": {
     "background": {
       "file": "background.png",

@@ -1,7 +1,7 @@
 {
   "id": "numbers",
   "title": "Numbers",
-  "rules_version": 1,
+  "rules_version": 2,
   "rules_engine": 6,
   "script": "main.lua",
   "images": {
@@ -16,5 +16,6 @@
     "thing_d": "thing_d.png"
   },
   "candidate_only": true,
-  "integration_note": "Build as engine-6 game-owned bundle with all five theme fields, countables, beads and tiles. No catalogue edits or signing performed."
+  "integration_note": "Build as engine-6 game-owned bundle with all five theme fields, countables, beads and tiles. No catalogue edits or signing performed.",
+  "status": "published"
 }
