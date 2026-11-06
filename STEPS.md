@@ -1,13 +1,10 @@
-# Sweetcorn Arcade 2026.11.15 — game-install queue reliability
+# Sweetcorn Arcade 2026.11.16 — power controls and restart history
 
-- Extra phone installs wait safely when the console's eight active request slots are full, then resume without another tap.
-- A waiting catalogue request no longer holds up ready unrelated game requests or firmware recovery commands.
-- Same-game remove/retry operations retain their ordering behind deferred installs.
-- Incompatible games return a clear instruction to update console firmware first.
-- Firmware updates can start from the idle installation-progress page.
-- Successful downloads no longer impose an artificial 30-second delay before the next game; refused starts retain retry backoff.
-- Reports the supported game-engine version for companion-app compatibility checks.
+- Adds Settings → Turn off with a separate cancellable countdown, using the AXP2101 power-chip shutdown command.
+- Requires a stable BOOT-button release before entering deep sleep and restores normal BOOT pin control after waking.
+- Background downloads no longer wake a dark screen or cancel the sleep/off countdown.
+- Saves the last four restart causes across power cycles, with readable history in About, to help diagnose unexpected waking without a USB monitor.
 
-All game packs and themes are unchanged from firmware14's release. Engine7 and firmware13/14 improvements are retained. Use the normal signed firmware update to preserve pairing, settings, installed games and saves; the browser factory installer is for initial installation.
+Use the normal signed firmware update to preserve pairing, settings, installed games and saves. The browser factory installer is for initial installation and fully erases the device. Game packs and themes are unchanged; firmware15 queue improvements are retained.
 
-Validation: 702 companion checks, a 20-install burst/drain regression, host shell checks and ESP-IDF build passed. Companion safeguards were also software-tested separately. Physical-console installation and burst behaviour must be verified independently; test results are not hardware proof.
+Validation: ESP-IDF build and software regression tests pass (14,048 shell checks and 4 rollback checks); restart-history tests cover persistence across observer resets. Hardware validation remains pending. The reported spontaneous wake on battery after holding BOOT is NOT confirmed fixed. Full shutdown on battery/USB, subsequent power-on, and sleep duration still need physical testing. USB charging and power-management circuitry may remain active while off.
